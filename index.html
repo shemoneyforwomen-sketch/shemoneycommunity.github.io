@@ -67,36 +67,19 @@ nav {
   line-height: 1.75; margin-bottom: 48px; font-weight: 300;
 }
 .hero-sub strong { color: var(--gold-light); font-weight: 600; }
-.form-wrap {
-  display: flex; flex-wrap: wrap; gap: 12px;
-  justify-content: center; max-width: 520px; width: 100%;
+.join-btn-wrap {
+  display: flex; justify-content: center; margin-bottom: 16px;
 }
-.form-wrap input {
-  flex: 1; min-width: 200px; padding: 15px 22px;
-  border-radius: 50px;
-  border: 1.5px solid rgba(201,150,43,0.35);
-  background: rgba(255,255,255,0.05);
-  color: var(--cream); font-size: 0.93rem;
-  font-family: 'DM Sans', sans-serif; outline: none;
-}
-.form-wrap input::placeholder { color: rgba(250,247,242,0.35); }
-.form-wrap input:focus { border-color: var(--gold); }
 .btn {
   padding: 15px 34px; border-radius: 50px;
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
   color: var(--black); font-weight: 700; font-size: 0.93rem;
   border: none; cursor: pointer; transition: all 0.3s;
   box-shadow: 0 8px 30px rgba(201,150,43,0.35);
-  white-space: nowrap;
+  white-space: nowrap; text-decoration: none; display: inline-block;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,150,43,0.5); }
 .note { margin-top: 14px; font-size: 0.78rem; color: rgba(250,247,242,0.35); }
-.success {
-  display: none; margin-top: 16px;
-  background: rgba(201,150,43,0.1); border: 1px solid var(--gold);
-  border-radius: 12px; padding: 14px 22px;
-  color: var(--gold-light); font-size: 0.88rem;
-}
 .stats {
   display: flex; gap: 48px; flex-wrap: wrap;
   justify-content: center; margin-top: 64px;
@@ -151,13 +134,6 @@ nav {
 .teaser-desc { font-size: 0.96rem; color: rgba(250,247,242,0.6); line-height: 1.8; max-width: 580px; margin: 0 auto 32px; font-weight: 300; }
 .tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
 .tag { background: rgba(201,150,43,0.1); border: 1px solid rgba(201,150,43,0.25); border-radius: 50px; padding: 6px 16px; font-size: 0.78rem; color: var(--gold-light); }
-.btn-outline {
-  padding: 14px 32px; border-radius: 50px;
-  border: 1.5px solid var(--gold); color: var(--gold);
-  background: transparent; font-weight: 600; font-size: 0.87rem;
-  cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block;
-}
-.btn-outline:hover { background: var(--gold); color: var(--black); }
 .teaser-note { margin-top: 16px; font-size: 0.74rem; color: rgba(250,247,242,0.25); font-style: italic; }
 
 /* TOOLS */
@@ -177,10 +153,6 @@ nav {
 .cta-title .l2 { display: block; color: var(--gold); }
 .cta-title .l3 { display: block; color: var(--blush); font-style: italic; }
 .cta-sub { font-size: 1rem; color: rgba(250,247,242,0.55); max-width: 460px; margin: 0 auto 44px; line-height: 1.75; font-weight: 300; }
-.cta-form { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 480px; margin: 0 auto; }
-.cta-form input { flex: 1; min-width: 190px; padding: 15px 22px; border-radius: 50px; border: 1.5px solid rgba(201,150,43,0.32); background: rgba(255,255,255,0.05); color: var(--cream); font-size: 0.93rem; font-family: 'DM Sans', sans-serif; outline: none; transition: border 0.3s; }
-.cta-form input::placeholder { color: rgba(250,247,242,0.3); }
-.cta-form input:focus { border-color: var(--gold); }
 
 /* FOOTER */
 footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08); padding: 52px 24px; text-align: center; }
@@ -198,7 +170,7 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
 @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
 .hero-title { animation: fadeUp 0.9s 0.1s ease both; }
 .hero-sub { animation: fadeUp 1s 0.2s ease both; }
-.form-wrap { animation: fadeUp 1s 0.3s ease both; }
+.join-btn-wrap { animation: fadeUp 1s 0.3s ease both; }
 
 @media (max-width: 768px) {
   nav { padding: 16px 20px; }
@@ -213,7 +185,7 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
 <!-- NAV -->
 <nav>
   <div class="nav-logo">SHE<span> MONEY</span></div>
-  <a href="#join" class="nav-btn">Join Us ✦</a>
+  <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn">Join Us ✦</a>
 </nav>
 
 <!-- HERO -->
@@ -227,18 +199,10 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
   <p class="hero-sub">
     The home of women who are done waiting. Learn <strong>social media marketing</strong>, build <strong>digital products</strong>, and create <strong>real income online</strong> — starting from zero.
   </p>
-  <div class="form-wrap" id="join">
-    <input type="text" placeholder="Your first name" id="n1">
-    <input type="email" placeholder="Your email address" id="e1">
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="text-decoration:none;display:inline-block;">Yes I Am In! 💰</a>
-```
-
-Then find:
-```
-<a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="text-decoration:none;display:inline-block;">Join SHE MONEY Community 🔥</a>
+  <div class="join-btn-wrap" id="join">
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn">Yes I Am In! 💰</a>
   </div>
   <p class="note">Join thousands of women building real income online · No spam · Unsubscribe any time</p>
-  <div class="success" id="s1">🎉 Welcome to SHE MONEY Community! Check your email for your gift.</div>
   <div class="stats">
     <div class="stat"><span class="stat-num">9K+</span><span class="stat-label">Women Following</span></div>
     <div class="stat"><span class="stat-num">R0</span><span class="stat-label">Cost to Start</span></div>
@@ -284,7 +248,7 @@ Then find:
       <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gold-light);margin-bottom:16px;line-height:1.2;">Your phone is your most powerful business tool.</h3>
       <p style="color:rgba(250,247,242,0.6);line-height:1.85;font-size:0.91rem;font-weight:300;margin-bottom:26px;">No degree needed. No office needed. No experience needed. Just a phone, the willingness to learn, and the right community around you.</p>
       <p style="color:var(--gold);font-size:0.86rem;font-weight:600;margin-bottom:26px;">"If you want to learn everything I am doing — invest in an e-learning program that changed my life. I believe it will change yours too."</p>
-      <a href="#join" class="btn" style="text-decoration:none;display:inline-block;">Join SHE MONEY Community 💛</a>
+      <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="text-decoration:none;display:inline-block;">Join SHE MONEY Community 💛</a>
     </div>
   </div>
 </section>
@@ -342,12 +306,9 @@ Then find:
     <span class="l3">Her Legacy.</span>
   </div>
   <p class="cta-sub">The time to start is TODAY. Not Monday. Not next month. Your community is waiting for you right now.</p>
-  <div class="cta-form">
-    <input type="text" placeholder="Your name" id="n2">
-    <input type="email" placeholder="Your email" id="e2">
-    <button class="btn" onclick="join2()">Join SHE MONEY Community 🔥</button>
+  <div style="display:flex;justify-content:center;">
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="font-size:1rem;padding:18px 44px;">Join SHE MONEY Community 🔥</a>
   </div>
-  <div class="success" id="s2" style="max-width:480px;margin:16px auto 0;">🎉 Welcome Sister! You are now part of SHE MONEY Community. Check your inbox!</div>
 </section>
 
 <!-- FOOTER -->
@@ -362,7 +323,7 @@ Then find:
     <a class="social" href="#" title="WhatsApp">💬</a>
   </div>
   <div class="footer-links">
-    <a href="#join">Join Us</a>
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank">Join Us</a>
     <a href="https://beacons.ai/shemoneycommunity" target="_blank">Our Store</a>
     <a href="https://www.facebook.com/profile.php?id=61577516427701" target="_blank">Facebook</a>
     <a href="#">Contact Us</a>
@@ -374,23 +335,6 @@ Then find:
 </footer>
 
 <script>
-function join1() {
-  var n = document.getElementById('n1').value.trim();
-  var e = document.getElementById('e1').value.trim();
-  if (!n || !e) { alert('Please enter your name and email 💛'); return; }
-  document.getElementById('s1').style.display = 'block';
-  document.getElementById('n1').value = '';
-  document.getElementById('e1').value = '';
-}
-function join2() {
-  var n = document.getElementById('n2').value.trim();
-  var e = document.getElementById('e2').value.trim();
-  if (!n || !e) { alert('Please enter your name and email 💛'); return; }
-  document.getElementById('s2').style.display = 'block';
-  document.getElementById('n2').value = '';
-  document.getElementById('e2').value = '';
-}
-// Scroll animations
 var obs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) {
