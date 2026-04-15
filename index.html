@@ -35,6 +35,14 @@ nav {
   text-decoration: none; transition: all 0.3s;
 }
 .nav-btn:hover { background: var(--gold-light); }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-link { color: rgba(250,247,242,0.75); font-size: 0.83rem; font-weight: 500; text-decoration: none; transition: color 0.3s; letter-spacing: 0.03em; }
+.nav-link:hover { color: var(--gold); }
+.nav-mobile-btn { display: none; }
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .nav-mobile-btn { display: block; }
+}
 
 /* HERO */
 .hero {
@@ -243,9 +251,14 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
 <!-- NAV -->
 <nav>
   <div class="nav-logo">SHE<span> MONEY</span></div>
-  <div style="display:flex;gap:16px;align-items:center;">
-    <a href="#va-services" style="color:var(--gold);font-size:0.83rem;font-weight:600;text-decoration:none;">Hire a VA</a>
+  <div class="nav-links">
+    <a href="#join" class="nav-link">Community</a>
+    <a href="https://beacons.ai/shemoneycommunity" target="_blank" class="nav-link">Our Store</a>
+    <a href="#va-services" class="nav-link">VA Services</a>
     <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn">Join Us ✦</a>
+  </div>
+  <div class="nav-mobile-btn">
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn" style="font-size:0.75rem;padding:8px 16px;">Join Us ✦</a>
   </div>
 </nav>
 
