@@ -146,6 +146,64 @@ nav {
 .tool-name { font-size: 0.78rem; font-weight: 600; color: var(--cream); }
 .tool-cost { font-size: 0.62rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
 
+/* VA SECTION */
+.va-section { background: linear-gradient(135deg, rgba(45,10,78,0.95) 0%, rgba(13,13,13,0.98) 100%); border-top: 1px solid rgba(201,150,43,0.2); border-bottom: 1px solid rgba(201,150,43,0.2); padding: 100px 24px; }
+.va-inner { max-width: 1100px; margin: 0 auto; }
+.va-hero { text-align: center; margin-bottom: 70px; }
+.va-badge { display: inline-block; background: rgba(201,150,43,0.15); border: 1px solid rgba(201,150,43,0.5); border-radius: 50px; padding: 8px 24px; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; }
+.va-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.va-title .highlight { color: var(--gold); }
+.va-subtitle { font-size: 1.05rem; color: rgba(250,247,242,0.65); max-width: 600px; margin: 0 auto 40px; line-height: 1.8; }
+.va-intro-box { background: rgba(201,150,43,0.06); border: 1px solid rgba(201,150,43,0.2); border-radius: 20px; padding: 32px 40px; max-width: 780px; margin: 0 auto 60px; text-align: left; }
+.va-intro-box p { font-size: 0.97rem; color: rgba(250,247,242,0.75); line-height: 1.9; }
+.va-intro-box strong { color: var(--gold-light); }
+.packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 70px; }
+.package-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,150,43,0.15); border-radius: 22px; padding: 36px 30px; transition: all 0.3s; position: relative; overflow: hidden; }
+.package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.package-card.featured { border-color: rgba(201,150,43,0.5); background: rgba(201,150,43,0.06); }
+.package-card.featured::before { height: 5px; }
+.popular-badge { display: inline-block; background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.package-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+.package-price { font-size: 2rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.package-period { font-size: 0.8rem; color: rgba(250,247,242,0.4); margin-bottom: 20px; }
+.package-divider { height: 1px; background: rgba(201,150,43,0.15); margin-bottom: 20px; }
+.package-features { list-style: none; margin-bottom: 28px; }
+.package-features li { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 0.88rem; color: rgba(250,247,242,0.75); }
+.package-features li::before { content: '✓'; color: var(--gold); font-weight: 700; min-width: 16px; margin-top: 1px; }
+.pkg-btn { display: block; text-align: center; padding: 13px 24px; border-radius: 50px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--black); font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: all 0.3s; }
+.pkg-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,150,43,0.4); }
+.pkg-btn.outline { background: transparent; border: 1.5px solid var(--gold); color: var(--gold); }
+.pkg-btn.outline:hover { background: var(--gold); color: var(--black); }
+.va-services { margin-bottom: 70px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+.service-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(201,150,43,0.1); border-radius: 16px; padding: 26px 22px; transition: all 0.3s; }
+.service-item:hover { border-color: rgba(201,150,43,0.35); transform: translateY(-3px); }
+.service-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+.service-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.service-desc { font-size: 0.82rem; color: rgba(250,247,242,0.5); line-height: 1.65; }
+.va-contact { background: rgba(201,150,43,0.05); border: 1px solid rgba(201,150,43,0.2); border-radius: 28px; padding: 60px 48px; text-align: center; max-width: 800px; margin: 0 auto; }
+.va-contact h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+.va-contact p { font-size: 0.97rem; color: rgba(250,247,242,0.6); line-height: 1.8; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; max-width: 520px; margin: 0 auto 28px; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid rgba(201,150,43,0.25); background: rgba(255,255,255,0.05); color: var(--cream); font-size: 0.92rem; font-family: 'DM Sans', sans-serif; outline: none; transition: border 0.3s; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--gold); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(250,247,242,0.3); }
+.contact-form select option { background: #1a1a1a; color: var(--cream); }
+.contact-form textarea { resize: vertical; min-height: 100px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submit-btn { padding: 15px 40px; border-radius: 50px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--black); font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 30px rgba(201,150,43,0.3); }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,150,43,0.5); }
+.form-success { display: none; background: rgba(201,150,43,0.1); border: 1px solid var(--gold); border-radius: 12px; padding: 16px 24px; color: var(--gold-light); font-size: 0.9rem; margin-top: 16px; }
+.contact-alternatives { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+.alt-contact { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border: 1px solid rgba(201,150,43,0.25); border-radius: 50px; font-size: 0.83rem; color: rgba(250,247,242,0.7); text-decoration: none; transition: all 0.3s; }
+.alt-contact:hover { border-color: var(--gold); color: var(--gold); }
+.why-elsie { max-width: 1100px; margin: 70px auto 0; }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.why-card { text-align: center; padding: 32px 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,150,43,0.1); border-radius: 18px; }
+.why-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--gold); display: block; margin-bottom: 8px; }
+.why-label { font-size: 0.85rem; color: rgba(250,247,242,0.55); line-height: 1.6; }
+@media (max-width: 768px) { .va-contact { padding: 40px 22px; } .form-row { grid-template-columns: 1fr; } .va-intro-box { padding: 24px; } }
+
 /* FINAL CTA */
 .cta { text-align: center; padding: 120px 24px; background: radial-gradient(ellipse 80% 55% at 50% 50%, rgba(201,150,43,0.1) 0%, transparent 70%); }
 .cta-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.08; margin-bottom: 22px; }
@@ -185,7 +243,10 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
 <!-- NAV -->
 <nav>
   <div class="nav-logo">SHE<span> MONEY</span></div>
-  <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn">Join Us ✦</a>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <a href="#va-services" style="color:var(--gold);font-size:0.83rem;font-weight:600;text-decoration:none;">Hire a VA</a>
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn">Join Us ✦</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -204,7 +265,7 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
   </div>
   <p class="note">Join thousands of women building real income online · No spam · Unsubscribe any time</p>
   <div class="stats">
-    <div class="stat"><span class="stat-num">9K+</span><span class="stat-label">Women Following</span></div>
+    <div class="stat"><span class="stat-num">10.2K+</span><span class="stat-label">Women Following</span></div>
     <div class="stat"><span class="stat-num">R0</span><span class="stat-label">Cost to Start</span></div>
     <div class="stat"><span class="stat-num">3</span><span class="stat-label">Programs Available</span></div>
     <div class="stat"><span class="stat-num">12</span><span class="stat-label">Years Experience</span></div>
@@ -270,7 +331,7 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
       <span class="tag">✦ Start From Your Phone</span>
       <span class="tag">✦ Real Results</span>
     </div>
-    <a href="https://www.facebook.com/profile.php?id=61577516427701" target="_blank" class="btn" style="text-decoration:none;display:inline-block;font-size:0.95rem;padding:16px 40px;">Message Me on Facebook 💼</a>
+    <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" class="btn" style="text-decoration:none;display:inline-block;font-size:0.95rem;padding:16px 40px;">Message Me on Facebook 💼</a>
     <p class="teaser-note">Join the community first — I will personally guide you to the right program for you.</p>
   </div>
 </div>
@@ -311,21 +372,175 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
   </div>
 </section>
 
+<!-- VIRTUAL ASSISTANT SECTION -->
+<section class="va-section" id="va-services">
+  <div class="va-inner">
+
+    <!-- Hero -->
+    <div class="va-hero">
+      <div class="va-badge">✦ Professional Virtual Assistant Services ✦</div>
+      <h2 class="va-title">Your Business Deserves<br><span class="highlight">Expert Support.</span></h2>
+      <p class="va-subtitle">Hi, I am Elsie Wilson — an Executive Secretary with 12+ years of experience, offering professional Virtual Assistant services to businesses globally. I bring real corporate skills directly to your business — remotely, efficiently, and with excellence.</p>
+      <div class="va-intro-box">
+        <p>I currently work as an Executive Secretary and have done so for over 12 years — managing high-level executives, coordinating complex operations, and keeping businesses running smoothly every single day. I bring that same <strong>professional excellence, reliability, and meticulous attention to detail</strong> directly to YOUR business remotely. I know what it takes because I do it daily. Whether you are a small business owner, entrepreneur, or corporate executive anywhere in the world — I am here to free up your time so you can focus on growing your business. 💼</p>
+      </div>
+    </div>
+
+    <!-- Why Choose Elsie Stats -->
+    <div class="why-elsie">
+      <div class="why-grid">
+        <div class="why-card"><span class="why-num">12+</span><span class="why-label">Years Executive Secretary Experience</span></div>
+        <div class="why-card"><span class="why-num">100%</span><span class="why-label">Remote — Work With Me From Anywhere</span></div>
+        <div class="why-card"><span class="why-num">24hr</span><span class="why-label">Response Time Guaranteed</span></div>
+        <div class="why-card"><span class="why-num">Global</span><span class="why-label">Clients Welcome Worldwide</span></div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="va-services" style="margin-top:70px;">
+      <span class="section-tag">✦ What I Can Do For Your Business</span>
+      <h3 class="section-title" style="margin-bottom:40px;">Services <span style="color:var(--gold)">I Offer</span></h3>
+      <div class="services-grid">
+        <div class="service-item"><span class="service-icon">📧</span><div class="service-name">Email Management</div><p class="service-desc">Inbox organisation, email drafting, filtering, responding to enquiries and managing correspondence professionally.</p></div>
+        <div class="service-item"><span class="service-icon">📅</span><div class="service-name">Calendar & Diary Management</div><p class="service-desc">Scheduling appointments, managing meetings, setting reminders and keeping your calendar organised and stress-free.</p></div>
+        <div class="service-item"><span class="service-icon">📱</span><div class="service-name">Social Media Management</div><p class="service-desc">Creating and scheduling content, managing your Facebook and Instagram pages, growing your online presence.</p></div>
+        <div class="service-item"><span class="service-icon">🎨</span><div class="service-name">Graphic Design (Canva)</div><p class="service-desc">Professional graphics, social media posts, company profiles, CVs, presentations and branded content.</p></div>
+        <div class="service-item"><span class="service-icon">📊</span><div class="service-name">Data Capturing & Admin</div><p class="service-desc">Accurate data entry, spreadsheet management, document preparation and general administrative support.</p></div>
+        <div class="service-item"><span class="service-icon">💬</span><div class="service-name">Customer Service Support</div><p class="service-desc">Responding to client enquiries, managing your inbox professionally and ensuring excellent customer experiences.</p></div>
+        <div class="service-item"><span class="service-icon">📝</span><div class="service-name">Content Writing</div><p class="service-desc">Writing captions, newsletters, blog posts, email sequences and marketing copy for your business.</p></div>
+        <div class="service-item"><span class="service-icon">🌐</span><div class="service-name">Website & Online Presence</div><p class="service-desc">Basic website updates, online store management, Beacons store setup and digital presence maintenance.</p></div>
+        <div class="service-item"><span class="service-icon">📋</span><div class="service-name">Research & Reporting</div><p class="service-desc">Market research, competitor analysis, compiling reports and gathering information to support your decisions.</p></div>
+      </div>
+    </div>
+
+    <!-- Packages -->
+    <div style="margin-top:70px;">
+      <span class="section-tag">✦ Investment</span>
+      <h3 class="section-title" style="margin-bottom:12px;">Choose Your <span style="color:var(--gold)">Package</span></h3>
+      <p class="section-sub">Flexible packages designed to fit your business needs and budget. All packages include a free 30-minute discovery call.</p>
+      <div class="packages-grid">
+
+        <!-- Starter -->
+        <div class="package-card">
+          <div class="package-name">Starter</div>
+          <div class="package-price">R3,000</div>
+          <div class="package-period">per month · 10 hours</div>
+          <div class="package-divider"></div>
+          <ul class="package-features">
+            <li>Email management (basic)</li>
+            <li>Calendar management</li>
+            <li>2 social media posts per week</li>
+            <li>Data capturing support</li>
+            <li>WhatsApp communication</li>
+            <li>Monthly progress report</li>
+          </ul>
+          <a href="#va-contact" class="pkg-btn outline">Get Started</a>
+        </div>
+
+        <!-- Professional (Featured) -->
+        <div class="package-card featured">
+          <div class="popular-badge">✦ Most Popular</div>
+          <div class="package-name">Professional</div>
+          <div class="package-price">R5,000</div>
+          <div class="package-period">per month · 20 hours</div>
+          <div class="package-divider"></div>
+          <ul class="package-features">
+            <li>Full email & inbox management</li>
+            <li>Calendar & diary management</li>
+            <li>5 social media posts per week</li>
+            <li>Canva graphic design</li>
+            <li>Customer service support</li>
+            <li>Content writing & captions</li>
+            <li>Data capturing & admin</li>
+            <li>Weekly progress report</li>
+          </ul>
+          <a href="#va-contact" class="pkg-btn">Book This Package</a>
+        </div>
+
+        <!-- Executive -->
+        <div class="package-card">
+          <div class="package-name">Executive</div>
+          <div class="package-price">R8,500</div>
+          <div class="package-period">per month · 40 hours</div>
+          <div class="package-divider"></div>
+          <ul class="package-features">
+            <li>Everything in Professional</li>
+            <li>Daily social media management</li>
+            <li>Full content strategy</li>
+            <li>Research & reporting</li>
+            <li>Website updates & maintenance</li>
+            <li>Newsletter creation</li>
+            <li>Priority response within 2 hours</li>
+            <li>Weekly strategy calls</li>
+            <li>Dedicated support line</li>
+          </ul>
+          <a href="#va-contact" class="pkg-btn outline">Get Started</a>
+        </div>
+
+      </div>
+      <p style="text-align:center;font-size:0.82rem;color:rgba(250,247,242,0.35);margin-top:20px;">* Custom packages available. International clients welcome. Rates in USD available on request.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="va-contact" id="va-contact" style="margin-top:70px;">
+      <h3>Ready to Work Together? 💼</h3>
+      <p>Fill in the form below and I will personally get back to you within 24 hours. Let us discuss how I can support your business and free up your valuable time.</p>
+      <div class="contact-form">
+        <div class="form-row">
+          <input type="text" id="va-name" placeholder="Your full name *" required>
+          <input type="email" id="va-email" placeholder="Your email address *" required>
+        </div>
+        <input type="text" id="va-business" placeholder="Your business name">
+        <input type="text" id="va-country" placeholder="Your country / location *" required>
+        <select id="va-package">
+          <option value="" disabled selected>Which package interests you? *</option>
+          <option value="starter">Starter — R3,000/month</option>
+          <option value="professional">Professional — R5,000/month</option>
+          <option value="executive">Executive — R8,500/month</option>
+          <option value="custom">Custom package — let us discuss</option>
+          <option value="discovery">Just a discovery call first</option>
+        </select>
+        <select id="va-service">
+          <option value="" disabled selected>Primary service needed *</option>
+          <option>Email & Calendar Management</option>
+          <option>Social Media Management</option>
+          <option>Graphic Design (Canva)</option>
+          <option>Admin & Data Capturing</option>
+          <option>Content Writing</option>
+          <option>Customer Service Support</option>
+          <option>Multiple Services</option>
+        </select>
+        <textarea id="va-message" placeholder="Tell me a little about your business and what you need help with..."></textarea>
+        <button class="submit-btn" onclick="submitVAForm()">Send My Enquiry 💼</button>
+      </div>
+      <div class="form-success" id="va-success">🎉 Thank you for reaching out! I will personally get back to you within 24 hours. Looking forward to working with you! 💼💛</div>
+      <div class="contact-alternatives">
+        <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" class="alt-contact">📘 Message on Facebook</a>
+        <a href="mailto:keolebogileva@gmail.com" class="alt-contact">📧 Email Me Directly</a>
+        <a href="https://beacons.ai/shemoneycommunity" target="_blank" class="alt-contact">🔗 Visit My Store</a>
+        <a href="https://wa.me/27732077775" target="_blank" class="alt-contact">💬 WhatsApp Me</a>
+        <a href="https://www.instagram.com/shemoney_forwomen/" target="_blank" class="alt-contact">📸 Instagram</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">SHE MONEY</div>
   <div class="footer-tag">Her Money. Her Power. Her Legacy. 💰</div>
   <div class="socials">
-    <a class="social" href="https://www.facebook.com/profile.php?id=61577516427701" target="_blank" title="Facebook">f</a>
+    <a class="social" href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" title="Facebook">f</a>
     <a class="social" href="https://beacons.ai/shemoneycommunity" target="_blank" title="Beacons">🔗</a>
-    <a class="social" href="#" title="TikTok">🎵</a>
-    <a class="social" href="#" title="Instagram">📸</a>
-    <a class="social" href="#" title="WhatsApp">💬</a>
+    <a class="social" href="https://www.tiktok.com/@shemoney_forwomen" target="_blank" title="TikTok">🎵</a>
+    <a class="social" href="https://www.instagram.com/shemoney_forwomen/" target="_blank" title="Instagram">📸</a>
+    <a class="social" href="https://wa.me/27732077775" target="_blank" title="WhatsApp">💬</a>
   </div>
   <div class="footer-links">
     <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank">Join Us</a>
     <a href="https://beacons.ai/shemoneycommunity" target="_blank">Our Store</a>
-    <a href="https://www.facebook.com/profile.php?id=61577516427701" target="_blank">Facebook</a>
+    <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank">Facebook</a>
     <a href="#">Contact Us</a>
   </div>
   <div class="footer-copy">
@@ -335,6 +550,36 @@ footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08
 </footer>
 
 <script>
+function submitVAForm() {
+  var name = document.getElementById('va-name').value.trim();
+  var email = document.getElementById('va-email').value.trim();
+  var country = document.getElementById('va-country').value.trim();
+  var pkg = document.getElementById('va-package').value;
+  if (!name || !email || !country || !pkg) {
+    alert('Please fill in all required fields 💛');
+    return;
+  }
+  // Send to Formspree
+  fetch('https://formspree.io/f/keolebogileva@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      business: document.getElementById('va-business').value,
+      country: country,
+      package: document.getElementById('va-package').value,
+      service: document.getElementById('va-service').value,
+      message: document.getElementById('va-message').value
+    })
+  }).catch(function(){});
+  document.getElementById('va-success').style.display = 'block';
+  document.getElementById('va-name').value = '';
+  document.getElementById('va-email').value = '';
+  document.getElementById('va-business').value = '';
+  document.getElementById('va-country').value = '';
+  document.getElementById('va-message').value = '';
+}
 var obs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) {
