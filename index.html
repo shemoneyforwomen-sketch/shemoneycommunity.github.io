@@ -35,13 +35,15 @@ nav {
   text-decoration: none; transition: all 0.3s;
 }
 .nav-btn:hover { background: var(--gold-light); }
-.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 .nav-link { color: rgba(250,247,242,0.75); font-size: 0.83rem; font-weight: 500; text-decoration: none; transition: color 0.3s; letter-spacing: 0.03em; }
 .nav-link:hover { color: var(--gold); }
 .nav-mobile-btn { display: none; }
 @media (max-width: 640px) {
-  .nav-links { display: none; }
-  .nav-mobile-btn { display: block; }
+  nav { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+  .nav-links { gap: 12px; }
+  .nav-link { font-size: 0.72rem; }
+  .nav-btn { font-size: 0.72rem; padding: 8px 14px; }
 }
 
 /* HERO */
