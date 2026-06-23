@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHE MONEY Community — Her Money. Her Power. Her Legacy.</title>
+<title>SHE MONEY — Her Money. Her Power. Her Legacy.</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -23,23 +23,17 @@ nav {
   position: fixed; top: 0; width: 100%; z-index: 100;
   padding: 18px 40px;
   display: flex; justify-content: space-between; align-items: center;
-  background: rgba(13,13,13,0.95);
+  background: rgba(13,13,13,0.97);
   border-bottom: 1px solid rgba(201,150,43,0.2);
 }
-.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--gold); }
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--gold); text-decoration: none; }
 .nav-logo span { color: var(--blush); }
-.nav-btn {
-  background: var(--gold); color: var(--black);
-  padding: 10px 24px; border-radius: 50px;
-  font-weight: 700; font-size: 0.85rem;
-  text-decoration: none; transition: all 0.3s;
-}
-.nav-btn:hover { background: var(--gold-light); }
-.nav-links { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.nav-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
 .nav-link { color: rgba(250,247,242,0.75); font-size: 0.83rem; font-weight: 500; text-decoration: none; transition: color 0.3s; letter-spacing: 0.03em; }
 .nav-link:hover { color: var(--gold); }
-.nav-mobile-btn { display: none; }
-@media (max-width: 640px) {
+.nav-btn { background: var(--gold); color: var(--black); padding: 10px 24px; border-radius: 50px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: all 0.3s; }
+.nav-btn:hover { background: var(--gold-light); }
+@media (max-width: 700px) {
   nav { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
   .nav-links { gap: 12px; }
   .nav-link { font-size: 0.72rem; }
@@ -77,9 +71,6 @@ nav {
   line-height: 1.75; margin-bottom: 48px; font-weight: 300;
 }
 .hero-sub strong { color: var(--gold-light); font-weight: 600; }
-.join-btn-wrap {
-  display: flex; justify-content: center; margin-bottom: 16px;
-}
 .btn {
   padding: 15px 34px; border-radius: 50px;
   background: linear-gradient(135deg, var(--gold), var(--gold-light));
@@ -89,23 +80,24 @@ nav {
   white-space: nowrap; text-decoration: none; display: inline-block;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,150,43,0.5); }
+.btn-outline {
+  padding: 13px 30px; border-radius: 50px;
+  background: transparent; border: 1.5px solid var(--gold);
+  color: var(--gold); font-weight: 700; font-size: 0.9rem;
+  text-decoration: none; display: inline-block; transition: all 0.3s;
+}
+.btn-outline:hover { background: var(--gold); color: var(--black); }
+.hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
 .note { margin-top: 14px; font-size: 0.78rem; color: rgba(250,247,242,0.35); }
-.stats {
-  display: flex; gap: 48px; flex-wrap: wrap;
-  justify-content: center; margin-top: 64px;
-}
+.stats { display: flex; gap: 48px; flex-wrap: wrap; justify-content: center; margin-top: 64px; }
 .stat { text-align: center; }
-.stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem; font-weight: 900;
-  color: var(--gold); display: block;
-}
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--gold); display: block; }
 .stat-label { font-size: 0.75rem; color: rgba(250,247,242,0.45); letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* DIVIDER */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,150,43,0.25), transparent); }
 
-/* SECTIONS */
+/* SECTION BASE */
 .section { max-width: 1100px; margin: 0 auto; padding: 90px 24px; }
 .section-tag { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 14px; }
 .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
@@ -113,502 +105,370 @@ nav {
 
 /* CARDS */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
-.card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(201,150,43,0.13);
-  border-radius: 18px; padding: 32px 28px;
-  transition: all 0.3s;
-}
+.card { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,150,43,0.13); border-radius: 18px; padding: 32px 28px; transition: all 0.3s; }
 .card:hover { border-color: rgba(201,150,43,0.4); transform: translateY(-4px); }
 .card-icon { font-size: 1.9rem; margin-bottom: 16px; display: block; }
 .card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
 .card-text { font-size: 0.87rem; color: rgba(250,247,242,0.52); line-height: 1.7; font-weight: 300; }
 
-/* FOR YOU */
-.for-you { background: rgba(201,150,43,0.04); border-top: 1px solid rgba(201,150,43,0.08); border-bottom: 1px solid rgba(201,150,43,0.08); padding: 90px 24px; }
-.for-you-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
-.checklist { list-style: none; }
-.checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid rgba(201,150,43,0.07); font-size: 0.92rem; color: rgba(250,247,242,0.78); }
-.checklist li:last-child { border-bottom: none; }
-.check { width: 20px; height: 20px; min-width: 20px; background: rgba(201,150,43,0.12); border: 1px solid rgba(201,150,43,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: var(--gold); margin-top: 2px; }
-
-/* TEASER */
-.teaser-wrap { max-width: 1100px; margin: 0 auto; padding: 90px 24px; }
-.teaser-box {
-  background: linear-gradient(135deg, rgba(201,150,43,0.08), rgba(13,13,13,0));
-  border: 1px solid rgba(201,150,43,0.22);
-  border-radius: 24px; padding: 60px 48px;
-  text-align: center; max-width: 800px; margin: 0 auto;
+/* COMMUNITY JOIN */
+.community-section {
+  background: linear-gradient(135deg, rgba(242,167,187,0.08), rgba(201,150,43,0.05));
+  border-top: 1px solid rgba(242,167,187,0.15);
+  border-bottom: 1px solid rgba(242,167,187,0.15);
+  padding: 100px 24px;
 }
-.teaser-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 900; color: var(--gold-light); margin-bottom: 16px; line-height: 1.2; }
-.teaser-desc { font-size: 0.96rem; color: rgba(250,247,242,0.6); line-height: 1.8; max-width: 580px; margin: 0 auto 32px; font-weight: 300; }
-.tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
-.tag { background: rgba(201,150,43,0.1); border: 1px solid rgba(201,150,43,0.25); border-radius: 50px; padding: 6px 16px; font-size: 0.78rem; color: var(--gold-light); }
-.teaser-note { margin-top: 16px; font-size: 0.74rem; color: rgba(250,247,242,0.25); font-style: italic; }
+.community-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+.community-inner .section-title { color: var(--white); }
+.community-inner .section-title span { color: var(--blush); }
+.community-perks { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 32px 0 40px; }
+.perk { background: rgba(242,167,187,0.1); border: 1px solid rgba(242,167,187,0.25); border-radius: 50px; padding: 8px 18px; font-size: 0.82rem; color: var(--blush); }
+.join-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; }
+.join-form input {
+  flex: 1; min-width: 200px; padding: 14px 20px; border-radius: 50px;
+  border: 1.5px solid rgba(201,150,43,0.3);
+  background: rgba(255,255,255,0.05); color: var(--cream);
+  font-size: 0.92rem; font-family: 'DM Sans', sans-serif; outline: none;
+}
+.join-form input::placeholder { color: rgba(250,247,242,0.35); }
+.join-form input:focus { border-color: var(--gold); }
+.join-note { margin-top: 16px; font-size: 0.75rem; color: rgba(250,247,242,0.3); }
 
-/* TOOLS */
-.tools-wrap { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(201,150,43,0.07); border-bottom: 1px solid rgba(201,150,43,0.07); padding: 90px 24px; }
-.tools-inner { max-width: 1100px; margin: 0 auto; }
-.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 13px; }
-.tool { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,150,43,0.1); border-radius: 13px; padding: 18px 12px; text-align: center; transition: all 0.3s; }
-.tool:hover { border-color: rgba(201,150,43,0.4); background: rgba(201,150,43,0.05); }
-.tool-emoji { font-size: 1.7rem; display: block; margin-bottom: 7px; }
-.tool-name { font-size: 0.78rem; font-weight: 600; color: var(--cream); }
-.tool-cost { font-size: 0.62rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
-
-/* VA SECTION */
-.va-section { background: linear-gradient(135deg, rgba(45,10,78,0.95) 0%, rgba(13,13,13,0.98) 100%); border-top: 1px solid rgba(201,150,43,0.2); border-bottom: 1px solid rgba(201,150,43,0.2); padding: 100px 24px; }
-.va-inner { max-width: 1100px; margin: 0 auto; }
-.va-hero { text-align: center; margin-bottom: 70px; }
-.va-badge { display: inline-block; background: rgba(201,150,43,0.15); border: 1px solid rgba(201,150,43,0.5); border-radius: 50px; padding: 8px 24px; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; }
-.va-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
-.va-title .highlight { color: var(--gold); }
-.va-subtitle { font-size: 1.05rem; color: rgba(250,247,242,0.65); max-width: 600px; margin: 0 auto 40px; line-height: 1.8; }
-.va-intro-box { background: rgba(201,150,43,0.06); border: 1px solid rgba(201,150,43,0.2); border-radius: 20px; padding: 32px 40px; max-width: 780px; margin: 0 auto 60px; text-align: left; }
-.va-intro-box p { font-size: 0.97rem; color: rgba(250,247,242,0.75); line-height: 1.9; }
-.va-intro-box strong { color: var(--gold-light); }
-.packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 70px; }
-.package-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,150,43,0.15); border-radius: 22px; padding: 36px 30px; transition: all 0.3s; position: relative; overflow: hidden; }
-.package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
-.package-card.featured { border-color: rgba(201,150,43,0.5); background: rgba(201,150,43,0.06); }
-.package-card.featured::before { height: 5px; }
-.popular-badge { display: inline-block; background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
-.package-name { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--white); margin-bottom: 8px; }
-.package-price { font-size: 2rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
-.package-period { font-size: 0.8rem; color: rgba(250,247,242,0.4); margin-bottom: 20px; }
-.package-divider { height: 1px; background: rgba(201,150,43,0.15); margin-bottom: 20px; }
-.package-features { list-style: none; margin-bottom: 28px; }
-.package-features li { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 0.88rem; color: rgba(250,247,242,0.75); }
-.package-features li::before { content: '✓'; color: var(--gold); font-weight: 700; min-width: 16px; margin-top: 1px; }
+/* WEB PACKAGES */
+.packages-section { padding: 100px 24px; }
+.packages-inner { max-width: 1100px; margin: 0 auto; }
+.packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 52px; }
+.pkg-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,150,43,0.15);
+  border-radius: 22px; padding: 36px 30px;
+  transition: all 0.3s; position: relative; overflow: hidden;
+}
+.pkg-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.pkg-card.featured { border-color: rgba(201,150,43,0.5); background: rgba(201,150,43,0.05); }
+.pkg-card.featured::before { height: 4px; }
+.popular-tag { display: inline-block; background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.pkg-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--white); margin-bottom: 6px; }
+.pkg-price { font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+.pkg-desc { font-size: 0.8rem; color: rgba(250,247,242,0.4); margin-bottom: 20px; }
+.pkg-divider { height: 1px; background: rgba(201,150,43,0.15); margin-bottom: 20px; }
+.pkg-features { list-style: none; margin-bottom: 28px; }
+.pkg-features li { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 0.87rem; color: rgba(250,247,242,0.75); border-bottom: 1px solid rgba(255,255,255,0.04); }
+.pkg-features li:last-child { border-bottom: none; }
+.pkg-features li::before { content: '✓'; color: var(--gold); font-weight: 700; min-width: 16px; margin-top: 1px; }
 .pkg-btn { display: block; text-align: center; padding: 13px 24px; border-radius: 50px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--black); font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: all 0.3s; }
 .pkg-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,150,43,0.4); }
 .pkg-btn.outline { background: transparent; border: 1.5px solid var(--gold); color: var(--gold); }
 .pkg-btn.outline:hover { background: var(--gold); color: var(--black); }
-.va-services { margin-bottom: 70px; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+.pkg-note { text-align: center; margin-top: 32px; font-size: 0.82rem; color: rgba(250,247,242,0.35); }
+
+/* VA SECTION */
+.va-section {
+  background: linear-gradient(135deg, rgba(45,10,78,0.95) 0%, rgba(13,13,13,0.98) 100%);
+  border-top: 1px solid rgba(201,150,43,0.2);
+  border-bottom: 1px solid rgba(201,150,43,0.2);
+  padding: 100px 24px;
+}
+.va-inner { max-width: 1100px; margin: 0 auto; }
+.va-badge { display: inline-block; background: rgba(201,150,43,0.15); border: 1px solid rgba(201,150,43,0.5); border-radius: 50px; padding: 8px 24px; font-size: 0.78rem; color: var(--gold-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; }
+.va-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.va-title .highlight { color: var(--gold); }
+.va-subtitle { font-size: 1rem; color: rgba(250,247,242,0.65); max-width: 600px; margin-bottom: 50px; line-height: 1.8; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-bottom: 60px; }
 .service-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(201,150,43,0.1); border-radius: 16px; padding: 26px 22px; transition: all 0.3s; }
 .service-item:hover { border-color: rgba(201,150,43,0.35); transform: translateY(-3px); }
 .service-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
 .service-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
 .service-desc { font-size: 0.82rem; color: rgba(250,247,242,0.5); line-height: 1.65; }
-.va-contact { background: rgba(201,150,43,0.05); border: 1px solid rgba(201,150,43,0.2); border-radius: 28px; padding: 60px 48px; text-align: center; max-width: 800px; margin: 0 auto; }
-.va-contact h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
-.va-contact p { font-size: 0.97rem; color: rgba(250,247,242,0.6); line-height: 1.8; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
-.contact-form { display: flex; flex-direction: column; gap: 16px; max-width: 520px; margin: 0 auto 28px; }
-.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 14px 20px; border-radius: 12px; border: 1.5px solid rgba(201,150,43,0.25); background: rgba(255,255,255,0.05); color: var(--cream); font-size: 0.92rem; font-family: 'DM Sans', sans-serif; outline: none; transition: border 0.3s; }
-.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--gold); }
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(250,247,242,0.3); }
-.contact-form select option { background: #1a1a1a; color: var(--cream); }
-.contact-form textarea { resize: vertical; min-height: 100px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.submit-btn { padding: 15px 40px; border-radius: 50px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--black); font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 30px rgba(201,150,43,0.3); }
-.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,150,43,0.5); }
-.form-success { display: none; background: rgba(201,150,43,0.1); border: 1px solid var(--gold); border-radius: 12px; padding: 16px 24px; color: var(--gold-light); font-size: 0.9rem; margin-top: 16px; }
-.contact-alternatives { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
-.alt-contact { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border: 1px solid rgba(201,150,43,0.25); border-radius: 50px; font-size: 0.83rem; color: rgba(250,247,242,0.7); text-decoration: none; transition: all 0.3s; }
-.alt-contact:hover { border-color: var(--gold); color: var(--gold); }
-.why-elsie { max-width: 1100px; margin: 70px auto 0; }
-.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-.why-card { text-align: center; padding: 32px 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(201,150,43,0.1); border-radius: 18px; }
-.why-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; color: var(--gold); display: block; margin-bottom: 8px; }
-.why-label { font-size: 0.85rem; color: rgba(250,247,242,0.55); line-height: 1.6; }
-@media (max-width: 768px) { .va-contact { padding: 40px 22px; } .form-row { grid-template-columns: 1fr; } .va-intro-box { padding: 24px; } }
 
-/* FINAL CTA */
-.cta { text-align: center; padding: 120px 24px; background: radial-gradient(ellipse 80% 55% at 50% 50%, rgba(201,150,43,0.1) 0%, transparent 70%); }
-.cta-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 7vw, 5.5rem); font-weight: 900; line-height: 1.08; margin-bottom: 22px; }
-.cta-title .l1 { display: block; color: var(--white); }
-.cta-title .l2 { display: block; color: var(--gold); }
-.cta-title .l3 { display: block; color: var(--blush); font-style: italic; }
-.cta-sub { font-size: 1rem; color: rgba(250,247,242,0.55); max-width: 460px; margin: 0 auto 44px; line-height: 1.75; font-weight: 300; }
+
+/* CONTACT */
+.contact-section { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(201,150,43,0.08); padding: 100px 24px; }
+.contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.contact-form { display: flex; flex-direction: column; gap: 14px; margin: 40px auto 0; max-width: 520px; text-align: left; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%; padding: 14px 20px; border-radius: 12px;
+  border: 1.5px solid rgba(201,150,43,0.25);
+  background: rgba(255,255,255,0.05); color: var(--cream);
+  font-size: 0.92rem; font-family: 'DM Sans', sans-serif; outline: none;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--gold); }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(250,247,242,0.35); }
+.contact-form select option { background: #1a1a1a; }
+.contact-form textarea { height: 120px; resize: vertical; }
+.contact-form .btn { width: 100%; text-align: center; border: none; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+.contact-info { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+.contact-detail { font-size: 0.88rem; color: rgba(250,247,242,0.5); }
+.contact-detail a { color: var(--gold); text-decoration: none; }
+.contact-detail a:hover { color: var(--gold-light); }
 
 /* FOOTER */
-footer { background: rgba(0,0,0,0.5); border-top: 1px solid rgba(201,150,43,0.08); padding: 52px 24px; text-align: center; }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--gold); margin-bottom: 8px; }
-.footer-tag { font-size: 0.83rem; color: rgba(250,247,242,0.35); margin-bottom: 32px; font-style: italic; }
-.socials { display: flex; gap: 12px; justify-content: center; margin-bottom: 28px; }
-.social { width: 40px; height: 40px; border: 1px solid rgba(201,150,43,0.22); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--cream); font-size: 0.9rem; transition: all 0.3s; }
-.social:hover { border-color: var(--gold); background: rgba(201,150,43,0.1); }
-.footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-.footer-links a { font-size: 0.8rem; color: rgba(250,247,242,0.38); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: var(--gold); }
-.footer-copy { font-size: 0.72rem; color: rgba(250,247,242,0.2); line-height: 1.8; }
-
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
-.hero-title { animation: fadeUp 0.9s 0.1s ease both; }
-.hero-sub { animation: fadeUp 1s 0.2s ease both; }
-.join-btn-wrap { animation: fadeUp 1s 0.3s ease both; }
-
-@media (max-width: 768px) {
-  nav { padding: 16px 20px; }
-  .for-you-inner { grid-template-columns: 1fr; gap: 40px; }
-  .stats { gap: 24px; }
-  .teaser-box { padding: 40px 22px; }
+footer {
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(201,150,43,0.1);
+  padding: 40px 24px; text-align: center;
 }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; color: var(--gold); margin-bottom: 12px; }
+.footer-tagline { font-size: 0.78rem; color: rgba(250,247,242,0.3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+.footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.footer-links a { font-size: 0.8rem; color: rgba(250,247,242,0.4); text-decoration: none; }
+.footer-links a:hover { color: var(--gold); }
+.footer-copy { font-size: 0.72rem; color: rgba(250,247,242,0.2); }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">SHE<span> MONEY</span></div>
+  <a href="#" class="nav-logo">SHE<span>MONEY</span></a>
   <div class="nav-links">
-    <a href="#join" class="nav-link">Community</a>
-    <a href="https://beacons.ai/shemoneycommunity" target="_blank" class="nav-link">Our Store</a>
+    <a href="#community" class="nav-link">Community</a>
+    <a href="#websites" class="nav-link">Web Design</a>
     <a href="#va-services" class="nav-link">VA Services</a>
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn">Join Us ✦</a>
-  </div>
-  <div class="nav-mobile-btn">
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="nav-btn" style="font-size:0.75rem;padding:8px 16px;">Join Us ✦</a>
+    <a href="#store" class="nav-link">Store</a>
+    <a href="#contact" class="nav-btn">Work With Me</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="top">
-  <div class="badge">💰 For All Women · Online Skills · Real Income</div>
+<section class="hero">
+  <span class="badge">✨ Her Money. Her Power. Her Legacy.</span>
   <h1 class="hero-title">
     <span class="she">SHE</span>
     <span class="money">MONEY</span>
     <span class="community">Community</span>
   </h1>
   <p class="hero-sub">
-    The home of women who are done waiting. Learn <strong>social media marketing</strong>, build <strong>digital products</strong>, and create <strong>real income online</strong> — starting from zero.
+    A movement for women who are <strong>done waiting</strong> — to earn more, build online, and create wealth that lasts beyond them.
   </p>
-  <div class="join-btn-wrap" id="join">
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn">Yes I Am In! 💰</a>
+  <div class="hero-btns">
+    <a href="#community" class="btn">Join the Community — It's Free</a>
+    <a href="#websites" class="btn-outline">I Need a Website</a>
   </div>
-  <p class="note">Join thousands of women building real income online · No spam · Unsubscribe any time</p>
+  <p class="note">No spam. Just tools, money tips & women winning.</p>
   <div class="stats">
-    <div class="stat"><span class="stat-num">10.2K+</span><span class="stat-label">Women Following</span></div>
-    <div class="stat"><span class="stat-num">R0</span><span class="stat-label">Cost to Start</span></div>
-    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Programs Available</span></div>
-    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Years Experience</span></div>
+    <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years in Corporate</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Brands Built</span></div>
+    <div class="stat"><span class="stat-num">R0</span><span class="stat-label">To Join</span></div>
   </div>
 </section>
-
 <div class="divider"></div>
 
-<!-- WHAT YOU GET -->
-<div class="section">
-  <span class="section-tag">✦ What You Get Inside</span>
-  <h2 class="section-title">Everything you need to<br><span style="color:var(--gold)">earn your own money.</span></h2>
-  <p class="section-sub">No gatekeeping. No expensive upfront costs. Just real skills, real tools, and real women on the same journey.</p>
+<!-- WHAT IS SHEMONEY -->
+<section class="section">
+  <span class="section-tag">About SheMoney</span>
+  <h2 class="section-title">Built by a woman who<br>learned the hard way</h2>
+  <p class="section-sub">Nobody sat us down and said — hey, you can build something of your own. I spent 12 years giving my best to other people's businesses. That feeling is what built SheMoney.</p>
   <div class="grid">
-    <div class="card"><span class="card-icon">📱</span><div class="card-title">Social Media Marketing</div><p class="card-text">Learn to manage social pages for businesses and get paid. Find clients, set your rates, deliver results — all from your phone.</p></div>
-    <div class="card"><span class="card-icon">💼</span><div class="card-title">Virtual Assistant Services</div><p class="card-text">Turn your professional admin and secretary skills into remote income. Earn R5,000 to R15,000 per month from home.</p></div>
-    <div class="card"><span class="card-icon">📚</span><div class="card-title">Digital Products</div><p class="card-text">Create once and sell forever. Build eBooks, templates, guides and journals that generate income while you sleep.</p></div>
-    <div class="card"><span class="card-icon">💰</span><div class="card-title">Passive Income Streams</div><p class="card-text">Stop trading only time for money. Learn systems and e-learning programs that work for you around the clock.</p></div>
-    <div class="card"><span class="card-icon">🎓</span><div class="card-title">E-Learning Programs</div><p class="card-text">Proven programs that have changed lives. Step by step systems for building real online income from zero.</p></div>
-    <div class="card"><span class="card-icon">👭</span><div class="card-title">Women's Community</div><p class="card-text">Thousands of women building their own money. Daily support, accountability and wins shared every single day.</p></div>
-  </div>
-</div>
-
-<!-- FOR YOU -->
-<section class="for-you">
-  <div class="for-you-inner">
-    <div>
-      <span class="section-tag">✦ This Is For You If...</span>
-      <h2 class="section-title" style="margin-bottom:32px;">You are done <em style="color:var(--gold)">waiting</em><br>for someone else<br>to save you.</h2>
-      <ul class="checklist">
-        <li><span class="check">✓</span>You are a stay-at-home mom who wants her own income</li>
-        <li><span class="check">✓</span>You are employed but your salary is never enough</li>
-        <li><span class="check">✓</span>You have admin or secretary skills you have never charged for</li>
-        <li><span class="check">✓</span>You want to work from home on your own terms</li>
-        <li><span class="check">✓</span>You are ready to invest in a program that changes your life</li>
-        <li><span class="check">✓</span>You are a woman of any age ready to build her legacy</li>
-      </ul>
-    </div>
-    <div style="background:rgba(201,150,43,0.05);border:1px solid rgba(201,150,43,0.15);border-radius:22px;padding:44px 36px;">
-      <span style="font-size:2.8rem;display:block;margin-bottom:18px;">🔥</span>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gold-light);margin-bottom:16px;line-height:1.2;">Your phone is your most powerful business tool.</h3>
-      <p style="color:rgba(250,247,242,0.6);line-height:1.85;font-size:0.91rem;font-weight:300;margin-bottom:26px;">No degree needed. No office needed. No experience needed. Just a phone, the willingness to learn, and the right community around you.</p>
-      <p style="color:var(--gold);font-size:0.86rem;font-weight:600;margin-bottom:26px;">"If you want to learn everything I am doing — invest in an e-learning program that changed my life. I believe it will change yours too."</p>
-      <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="text-decoration:none;display:inline-block;">Join SHE MONEY Community 💛</a>
-    </div>
+    <div class="card"><span class="card-icon">💰</span><h3 class="card-title">Money Education</h3><p class="card-text">Weekly tips on budgeting, saving, debt freedom and building wealth — in plain language that actually makes sense.</p></div>
+    <div class="card"><span class="card-icon">💻</span><h3 class="card-title">Digital Skills</h3><p class="card-text">Learn how to earn online — from VA work to digital products to building your own AI-powered business.</p></div>
+    <div class="card"><span class="card-icon">👑</span><h3 class="card-title">Community & Support</h3><p class="card-text">Women who understand the hustle, share the wins, and show up for each other. You are not building alone.</p></div>
   </div>
 </section>
+<div class="divider"></div>
 
-<!-- PROGRAM TEASER -->
-<div class="teaser-wrap">
-  <span class="section-tag">✦ Ready to Go Deeper?</span>
-  <h2 class="section-title">Programs that have<br><span style="color:var(--gold)">changed lives.</span></h2>
-  <p class="section-sub">When you are ready to go beyond free learning — these are the programs I personally recommend and promote. Tried. Tested. Real results.</p>
-  <div class="teaser-box">
-    <span style="font-size:2.8rem;display:block;margin-bottom:20px;">🚀</span>
-    <div class="teaser-title">Proven Step-by-Step<br>Online Income Systems</div>
-    <p class="teaser-desc">I promote three powerful e-learning programs inside SHE MONEY Community. They cover everything from building your foundation online to scaling your income. I do not share the details publicly — I share them personally to make sure the right program reaches the right woman.</p>
-    <div class="tags">
-      <span class="tag">✦ Done For You Systems</span>
-      <span class="tag">✦ Step-by-Step Blueprints</span>
-      <span class="tag">✦ Passive Income Strategy</span>
-      <span class="tag">✦ Works For Beginners</span>
-      <span class="tag">✦ Start From Your Phone</span>
-      <span class="tag">✦ Real Results</span>
+<!-- COMMUNITY JOIN -->
+<section class="community-section" id="community">
+  <div class="community-inner">
+    <span class="section-tag">Join Free</span>
+    <h2 class="section-title">Join <span>1000+ women</span><br>building their financial future</h2>
+    <p style="font-size:0.96rem;color:rgba(250,247,242,0.6);line-height:1.8;margin-bottom:32px;">Get weekly money tips, free resources, first access to tools and a community of women who get it. Your email list is yours — no algorithm, no ban can take it away.</p>
+    <div class="community-perks">
+      <span class="perk">📧 Weekly Money Tips</span>
+      <span class="perk">🎁 Free Resources</span>
+      <span class="perk">🔓 Early Access to Tools</span>
+      <span class="perk">👯 Community of Women</span>
+      <span class="perk">💸 Income Opportunities</span>
     </div>
-    <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" class="btn" style="text-decoration:none;display:inline-block;font-size:0.95rem;padding:16px 40px;">Message Me on Facebook 💼</a>
-    <p class="teaser-note">Join the community first — I will personally guide you to the right program for you.</p>
-  </div>
-</div>
-
-<!-- FREE TOOLS -->
-<div class="tools-wrap">
-  <div class="tools-inner">
-    <span class="section-tag">✦ Your Free Toolkit</span>
-    <h2 class="section-title">Start with <span style="color:var(--gold)">R0.</span><br>Build with free tools.</h2>
-    <p class="section-sub" style="margin-bottom:40px;">Every tool we teach costs nothing. You need zero money to start — just the right knowledge and community.</p>
-    <div class="tools-grid">
-      <div class="tool"><span class="tool-emoji">🎨</span><span class="tool-name">Canva</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">🚀</span><span class="tool-name">Systeme.io</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">🤖</span><span class="tool-name">ChatGPT</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">📧</span><span class="tool-name">Gmail</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">📅</span><span class="tool-name">Google Drive</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">🔗</span><span class="tool-name">Beacons</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">📹</span><span class="tool-name">Google Meet</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">📊</span><span class="tool-name">Meta Business</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">💬</span><span class="tool-name">WhatsApp Biz</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">📝</span><span class="tool-name">Notion</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">🎵</span><span class="tool-name">TikTok Studio</span><div class="tool-cost">Free</div></div>
-      <div class="tool"><span class="tool-emoji">🎥</span><span class="tool-name">YouTube</span><div class="tool-cost">Free</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- FINAL CTA -->
-<section class="cta">
-  <div class="cta-title">
-    <span class="l1">Her Money.</span>
-    <span class="l2">Her Power.</span>
-    <span class="l3">Her Legacy.</span>
-  </div>
-  <p class="cta-sub">The time to start is TODAY. Not Monday. Not next month. Your community is waiting for you right now.</p>
-  <div style="display:flex;justify-content:center;">
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank" class="btn" style="font-size:1rem;padding:18px 44px;">Join SHE MONEY Community 🔥</a>
+    <a href="https://shemoneyforwomen.systeme.io/2d56f275" class="btn" target="_blank" style="font-size:1rem;padding:16px 40px;">Join the Community Free →</a>
+    <p class="join-note">No spam. Unsubscribe anytime. We respect your inbox.</p>
   </div>
 </section>
+<div class="divider"></div>
 
-<!-- VIRTUAL ASSISTANT SECTION -->
+<!-- WEBSITE PACKAGES -->
+<section class="packages-section" id="websites">
+  <div class="packages-inner">
+    <span class="section-tag">Web Design Services</span>
+    <h2 class="section-title">I Build Websites<br>for SA Startups</h2>
+    <p class="section-sub">Professional websites powered by AI — delivered faster, priced fairly. Your business deserves to look the part online.</p>
+    <div class="packages-grid">
+      <!-- Starter -->
+      <div class="pkg-card">
+        <p class="pkg-name">Starter</p>
+        <p class="pkg-price">R3,500</p>
+        <p class="pkg-desc">Perfect for new businesses needing a fast, clean online presence</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>1-page landing website</li>
+          <li>AI-written copy (your brand voice)</li>
+          <li>Mobile responsive design</li>
+          <li>WhatsApp & contact button</li>
+          <li>Basic SEO setup</li>
+          <li>Delivered in 3–5 days</li>
+        </ul>
+        <a href="#contact" class="pkg-btn outline">Get Started</a>
+      </div>
+      <!-- Standard -->
+      <div class="pkg-card featured">
+        <span class="popular-tag">Most Popular</span>
+        <p class="pkg-name">Standard</p>
+        <p class="pkg-price">R8,500</p>
+        <p class="pkg-desc">Full business website that converts visitors into clients</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Up to 5 pages (Home, About, Services, Gallery, Contact)</li>
+          <li>AI-written copy + image sourcing</li>
+          <li>Mobile responsive design</li>
+          <li>Contact form + WhatsApp button</li>
+          <li>Google Analytics setup</li>
+          <li>Social media links</li>
+          <li>Delivered in 5–7 days</li>
+        </ul>
+        <a href="#contact" class="pkg-btn">Get Started</a>
+      </div>
+      <!-- Premium -->
+      <div class="pkg-card">
+        <p class="pkg-name">Premium</p>
+        <p class="pkg-price">R18,000</p>
+        <p class="pkg-desc">Full startup website with branding, store & ongoing support</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>Up to 8 pages</li>
+          <li>Custom design & branding</li>
+          <li>Blog setup</li>
+          <li>Basic online store (up to 20 products)</li>
+          <li>Email marketing setup</li>
+          <li>Social media integration</li>
+          <li>1 month post-launch support</li>
+          <li>Delivered in 2–3 weeks</li>
+        </ul>
+        <a href="#contact" class="pkg-btn outline">Get Started</a>
+      </div>
+    </div>
+    <p class="pkg-note">💬 Need something custom? <a href="#contact" style="color:var(--gold);text-decoration:none;">Let's chat</a> — all packages include a free 15-minute discovery call. Monthly maintenance from R800/month.</p>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- VA & DIGITAL MARKETING SERVICES -->
 <section class="va-section" id="va-services">
   <div class="va-inner">
-
-    <!-- Hero -->
-    <div class="va-hero">
-      <div class="va-badge">✦ Professional Virtual Assistant Services ✦</div>
-      <h2 class="va-title">Your Business Deserves<br><span class="highlight">Expert Support.</span></h2>
-      <p class="va-subtitle">Hi, I am Elsie Wilson — an Executive Secretary with 12+ years of experience, offering professional Virtual Assistant services to businesses globally. I bring real corporate skills directly to your business — remotely, efficiently, and with excellence.</p>
-      <div class="va-intro-box">
-        <p>I currently work as an Executive Secretary and have done so for over 12 years — managing high-level executives, coordinating complex operations, and keeping businesses running smoothly every single day. I bring that same <strong>professional excellence, reliability, and meticulous attention to detail</strong> directly to YOUR business remotely. I know what it takes because I do it daily. Whether you are a small business owner, entrepreneur, or corporate executive anywhere in the world — I am here to free up your time so you can focus on growing your business. 💼</p>
+    <span class="va-badge">Executive VA & Digital Marketing</span>
+    <h2 class="va-title">Your business runs better<br>when you have the <span class="highlight">right support</span></h2>
+    <p class="va-subtitle">With 12+ years of corporate experience and AI-powered tools, I help entrepreneurs, executives and small businesses operate at their best — without the overhead of a full-time hire.</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <span class="service-icon">📋</span>
+        <h3 class="service-name">Executive VA Support</h3>
+        <p class="service-desc">Calendar management, email management, travel coordination, reports and administrative support for busy executives.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">📱</span>
+        <h3 class="service-name">Social Media Management</h3>
+        <p class="service-desc">Content creation, scheduling, captions, hashtag strategy and community engagement across all platforms.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">✍️</span>
+        <h3 class="service-name">Content & Copywriting</h3>
+        <p class="service-desc">Blog posts, newsletters, website copy, product descriptions and marketing materials written in your brand voice.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">📧</span>
+        <h3 class="service-name">Email Marketing</h3>
+        <p class="service-desc">Setup, strategy, email sequences, campaigns and list management to grow and nurture your audience.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">🤖</span>
+        <h3 class="service-name">AI-Powered Solutions</h3>
+        <p class="service-desc">CV builders, content generators, chatbots and custom AI tools built for your specific business needs.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">🎯</span>
+        <h3 class="service-name">Digital Marketing Strategy</h3>
+        <p class="service-desc">Full marketing strategy, brand positioning, funnel setup and campaign management to grow your business online.</p>
       </div>
     </div>
-
-    <!-- Why Choose Elsie Stats -->
-    <div class="why-elsie">
-      <div class="why-grid">
-        <div class="why-card"><span class="why-num">12+</span><span class="why-label">Years Executive Secretary Experience</span></div>
-        <div class="why-card"><span class="why-num">100%</span><span class="why-label">Remote — Work With Me From Anywhere</span></div>
-        <div class="why-card"><span class="why-num">24hr</span><span class="why-label">Response Time Guaranteed</span></div>
-        <div class="why-card"><span class="why-num">Global</span><span class="why-label">Clients Welcome Worldwide</span></div>
-      </div>
+    <div style="text-align:center;">
+      <a href="#contact" class="btn">Let's Chat →</a>
     </div>
+  </div>
+</section>
+<div class="divider"></div>
 
-    <!-- Services -->
-    <div class="va-services" style="margin-top:70px;">
-      <span class="section-tag">✦ What I Can Do For Your Business</span>
-      <h3 class="section-title" style="margin-bottom:40px;">Services <span style="color:var(--gold)">I Offer</span></h3>
-      <div class="services-grid">
-        <div class="service-item"><span class="service-icon">📧</span><div class="service-name">Email Management</div><p class="service-desc">Inbox organisation, email drafting, filtering, responding to enquiries and managing correspondence professionally.</p></div>
-        <div class="service-item"><span class="service-icon">📅</span><div class="service-name">Calendar & Diary Management</div><p class="service-desc">Scheduling appointments, managing meetings, setting reminders and keeping your calendar organised and stress-free.</p></div>
-        <div class="service-item"><span class="service-icon">📱</span><div class="service-name">Social Media Management</div><p class="service-desc">Creating and scheduling content, managing your Facebook and Instagram pages, growing your online presence.</p></div>
-        <div class="service-item"><span class="service-icon">🎨</span><div class="service-name">Graphic Design (Canva)</div><p class="service-desc">Professional graphics, social media posts, company profiles, CVs, presentations and branded content.</p></div>
-        <div class="service-item"><span class="service-icon">📊</span><div class="service-name">Data Capturing & Admin</div><p class="service-desc">Accurate data entry, spreadsheet management, document preparation and general administrative support.</p></div>
-        <div class="service-item"><span class="service-icon">💬</span><div class="service-name">Customer Service Support</div><p class="service-desc">Responding to client enquiries, managing your inbox professionally and ensuring excellent customer experiences.</p></div>
-        <div class="service-item"><span class="service-icon">📝</span><div class="service-name">Content Writing</div><p class="service-desc">Writing captions, newsletters, blog posts, email sequences and marketing copy for your business.</p></div>
-        <div class="service-item"><span class="service-icon">🌐</span><div class="service-name">Website & Online Presence</div><p class="service-desc">Basic website updates, online store management, Beacons store setup and digital presence maintenance.</p></div>
-        <div class="service-item"><span class="service-icon">📋</span><div class="service-name">Research & Reporting</div><p class="service-desc">Market research, competitor analysis, compiling reports and gathering information to support your decisions.</p></div>
-      </div>
+<!-- STORE -->
+<section class="section" id="store">
+  <span class="section-tag">SheMoney Store</span>
+  <h2 class="section-title">Ready to go deeper?<br>Visit our store</h2>
+  <p class="section-sub">E-learning programs, workbooks, guides and templates — everything you need to build your digital income and financial freedom, all in one place.</p>
+  <div style="text-align:center;">
+    <a href="https://beacons.ai/shemoneycommunity" class="btn" target="_blank">Shop Now →</a>
+    <p class="note" style="margin-top:16px;">Digital products · Instant access · Built for women</p>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-title">Let's Chat</h2>
+    <p style="font-size:0.96rem;color:rgba(250,247,242,0.6);line-height:1.8;">Prices are listed above — pick what works for you and send me a message. I'll get back to you within 24 hours on WhatsApp or email.</p>
+    <form class="contact-form" action="https://formspree.io/f/xrerezao" method="POST">
+      <input type="hidden" name="_subject" value="New Enquiry — SheMoney Website">
+      <input type="hidden" name="source" value="Lets Chat Enquiry Form">
+      <input type="text" name="name" placeholder="Your full name" required>
+      <input type="email" name="email" placeholder="Your email address" required>
+      <input type="tel" name="phone" placeholder="Your phone number (optional)">
+      <select name="service" required>
+        <option value="" disabled selected>What do you need help with?</option>
+        <option>Website Design — Starter (R3,500)</option>
+        <option>Website Design — Standard (R8,500)</option>
+        <option>Website Design — Premium (R18,000)</option>
+        <option>Executive VA Services</option>
+        <option>Social Media Management</option>
+        <option>Email Marketing Setup</option>
+        <option>Digital Marketing Strategy</option>
+        <option>AI-Powered Solutions</option>
+        <option>Something else</option>
+      </select>
+      <textarea name="message" placeholder="Tell me a bit about your business and what you need..."></textarea>
+      <button type="submit" class="btn">Send Message →</button>
+    </form>
+    <div class="contact-info">
+      <span class="contact-detail">📞 <a href="tel:0732077775">073 207 7775</a></span>
+      <span class="contact-detail">🌐 <a href="https://www.shemoney.co.za">www.shemoney.co.za</a></span>
+      <span class="contact-detail">📧 <a href="mailto:shemoneyforwomen@gmail.com">shemoneyforwomen@gmail.com</a></span>
+      <span class="contact-detail">💬 <a href="https://wa.me/27732077775?text=Hi%20Elsie!%20I%20found%20you%20on%20shemoney.co.za" target="_blank">WhatsApp Me</a></span>
     </div>
-
-    <!-- Packages -->
-    <div style="margin-top:70px;">
-      <span class="section-tag">✦ Investment</span>
-      <h3 class="section-title" style="margin-bottom:12px;">Choose Your <span style="color:var(--gold)">Package</span></h3>
-      <p class="section-sub">Flexible packages designed to fit your business needs and budget. All packages include a free 30-minute discovery call.</p>
-      <div class="packages-grid">
-
-        <!-- Starter -->
-        <div class="package-card">
-          <div class="package-name">Starter</div>
-          <div class="package-price">R3,000</div>
-          <div class="package-period">per month · 10 hours</div>
-          <div class="package-divider"></div>
-          <ul class="package-features">
-            <li>Email management (basic)</li>
-            <li>Calendar management</li>
-            <li>2 social media posts per week</li>
-            <li>Data capturing support</li>
-            <li>WhatsApp communication</li>
-            <li>Monthly progress report</li>
-          </ul>
-          <a href="#va-contact" class="pkg-btn outline">Get Started</a>
-        </div>
-
-        <!-- Professional (Featured) -->
-        <div class="package-card featured">
-          <div class="popular-badge">✦ Most Popular</div>
-          <div class="package-name">Professional</div>
-          <div class="package-price">R5,000</div>
-          <div class="package-period">per month · 20 hours</div>
-          <div class="package-divider"></div>
-          <ul class="package-features">
-            <li>Full email & inbox management</li>
-            <li>Calendar & diary management</li>
-            <li>5 social media posts per week</li>
-            <li>Canva graphic design</li>
-            <li>Customer service support</li>
-            <li>Content writing & captions</li>
-            <li>Data capturing & admin</li>
-            <li>Weekly progress report</li>
-          </ul>
-          <a href="#va-contact" class="pkg-btn">Book This Package</a>
-        </div>
-
-        <!-- Executive -->
-        <div class="package-card">
-          <div class="package-name">Executive</div>
-          <div class="package-price">R8,500</div>
-          <div class="package-period">per month · 40 hours</div>
-          <div class="package-divider"></div>
-          <ul class="package-features">
-            <li>Everything in Professional</li>
-            <li>Daily social media management</li>
-            <li>Full content strategy</li>
-            <li>Research & reporting</li>
-            <li>Website updates & maintenance</li>
-            <li>Newsletter creation</li>
-            <li>Priority response within 2 hours</li>
-            <li>Weekly strategy calls</li>
-            <li>Dedicated support line</li>
-          </ul>
-          <a href="#va-contact" class="pkg-btn outline">Get Started</a>
-        </div>
-
-      </div>
-      <p style="text-align:center;font-size:0.82rem;color:rgba(250,247,242,0.35);margin-top:20px;">* Custom packages available. International clients welcome. Rates in USD available on request.</p>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="va-contact" id="va-contact" style="margin-top:70px;">
-      <h3>Ready to Work Together? 💼</h3>
-      <p>Fill in the form below and I will personally get back to you within 24 hours. Let us discuss how I can support your business and free up your valuable time.</p>
-      <div class="contact-form">
-        <div class="form-row">
-          <input type="text" id="va-name" placeholder="Your full name *" required>
-          <input type="email" id="va-email" placeholder="Your email address *" required>
-        </div>
-        <input type="text" id="va-business" placeholder="Your business name">
-        <input type="text" id="va-country" placeholder="Your country / location *" required>
-        <select id="va-package">
-          <option value="" disabled selected>Which package interests you? *</option>
-          <option value="starter">Starter — R3,000/month</option>
-          <option value="professional">Professional — R5,000/month</option>
-          <option value="executive">Executive — R8,500/month</option>
-          <option value="custom">Custom package — let us discuss</option>
-          <option value="discovery">Just a discovery call first</option>
-        </select>
-        <select id="va-service">
-          <option value="" disabled selected>Primary service needed *</option>
-          <option>Email & Calendar Management</option>
-          <option>Social Media Management</option>
-          <option>Graphic Design (Canva)</option>
-          <option>Admin & Data Capturing</option>
-          <option>Content Writing</option>
-          <option>Customer Service Support</option>
-          <option>Multiple Services</option>
-        </select>
-        <textarea id="va-message" placeholder="Tell me a little about your business and what you need help with..."></textarea>
-        <button class="submit-btn" onclick="submitVAForm()">Send My Enquiry 💼</button>
-      </div>
-      <div class="form-success" id="va-success">🎉 Thank you for reaching out! I will personally get back to you within 24 hours. Looking forward to working with you! 💼💛</div>
-      <div class="contact-alternatives">
-        <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" class="alt-contact">📘 Message on Facebook</a>
-        <a href="mailto:keolebogileva@gmail.com" class="alt-contact">📧 Email Me Directly</a>
-        <a href="https://beacons.ai/shemoneycommunity" target="_blank" class="alt-contact">🔗 Visit My Store</a>
-        <a href="https://wa.me/27732077775?text=Hi%20Elsie!%20I%20am%20interested%20in%20your%20VA%20services." target="_blank" class="alt-contact">💬 WhatsApp Me</a>
-        <a href="https://www.instagram.com/shemoney_forwomen/" target="_blank" class="alt-contact">📸 Instagram</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">SHE MONEY</div>
-  <div class="footer-tag">Her Money. Her Power. Her Legacy. 💰</div>
-  <div class="socials">
-    <a class="social" href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" title="Facebook">f</a>
-    <a class="social" href="https://beacons.ai/shemoneycommunity" target="_blank" title="Beacons">🔗</a>
-    <a class="social" href="https://www.tiktok.com/@shemoney_forwomen" target="_blank" title="TikTok">🎵</a>
-    <a class="social" href="https://www.instagram.com/shemoney_forwomen/" target="_blank" title="Instagram">📸</a>
-    <a class="social" href="https://wa.me/27732077775?text=Hi%20Elsie!%20I%20found%20you%20on%20shemoney.co.za" target="_blank" title="WhatsApp">💬</a>
+  <p class="footer-logo">SHEMONEY</p>
+  <p class="footer-tagline">Her Money. Her Power. Her Legacy. 💰</p>
+  <div style="display:flex;gap:12px;justify-content:center;margin-bottom:24px;">
+    <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" style="width:40px;height:40px;border:1px solid rgba(201,150,43,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:0.9rem;transition:all 0.3s;">f</a>
+    <a href="https://www.instagram.com/shemoney_forwomen/" target="_blank" style="width:40px;height:40px;border:1px solid rgba(201,150,43,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:0.9rem;">📸</a>
+    <a href="https://www.tiktok.com/@shemoney_forwomen" target="_blank" style="width:40px;height:40px;border:1px solid rgba(201,150,43,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:0.9rem;">🎵</a>
+    <a href="https://wa.me/27732077775" target="_blank" style="width:40px;height:40px;border:1px solid rgba(201,150,43,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:0.9rem;">💬</a>
+    <a href="https://beacons.ai/shemoneycommunity" target="_blank" style="width:40px;height:40px;border:1px solid rgba(201,150,43,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:0.9rem;">🔗</a>
   </div>
   <div class="footer-links">
-    <a href="https://shemoneyforwomen.systeme.io/2d56f275" target="_blank">Join Us</a>
-    <a href="https://beacons.ai/shemoneycommunity" target="_blank">Our Store</a>
-    <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank">Facebook</a>
-    <a href="#">Contact Us</a>
+    <a href="#community">Community</a>
+    <a href="#websites">Web Design</a>
+    <a href="#va-services">VA Services</a>
+    <a href="#store">Store</a>
+    <a href="#contact">Contact</a>
   </div>
-  <div class="footer-copy">
-    © 2025 SHE MONEY Community · shemoney.co.za · All rights reserved<br>
-    <span style="font-style:italic;color:rgba(250,247,242,0.15);">For women. By women. Always.</span>
-  </div>
+  <p class="footer-copy">© 2026 SheMoney. Built with 💛 for women who are done waiting.</p>
 </footer>
 
-<script>
-function submitVAForm() {
-  var name = document.getElementById('va-name').value.trim();
-  var email = document.getElementById('va-email').value.trim();
-  var country = document.getElementById('va-country').value.trim();
-  var pkg = document.getElementById('va-package').value;
-  if (!name || !email || !country || !pkg) {
-    alert('Please fill in all required fields 💛');
-    return;
-  }
-  // Send to Formspree
-  fetch('https://formspree.io/f/xrerezao', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      business: document.getElementById('va-business').value,
-      country: country,
-      package: document.getElementById('va-package').value,
-      service: document.getElementById('va-service').value,
-      message: document.getElementById('va-message').value
-    })
-  }).catch(function(){});
-  document.getElementById('va-success').style.display = 'block';
-  document.getElementById('va-name').value = '';
-  document.getElementById('va-email').value = '';
-  document.getElementById('va-business').value = '';
-  document.getElementById('va-country').value = '';
-  document.getElementById('va-message').value = '';
-}
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.card, .tool').forEach(function(el, i) {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ' + (i * 0.05) + 's ease, transform 0.5s ' + (i * 0.05) + 's ease';
-  obs.observe(el);
-});
-</script>
 </body>
 </html>
