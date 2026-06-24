@@ -59,15 +59,15 @@ nav {
 }
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 10vw, 7rem);
-  font-weight: 900; line-height: 1.0; margin-bottom: 24px;
+  font-size: clamp(2.2rem, 7vw, 5rem);
+  font-weight: 900; line-height: 1.08; margin-bottom: 24px;
 }
-.hero-title .she { color: var(--gold); display: block; }
-.hero-title .money { color: var(--white); display: block; }
-.hero-title .community { color: var(--blush); font-style: italic; font-size: 0.5em; display: block; }
+.hero-title .line1 { color: var(--white); display: block; }
+.hero-title .line2 { color: var(--gold); display: block; }
+.hero-title .line3 { color: var(--blush); font-style: italic; font-size: 0.7em; display: block; margin-top: 8px; }
 .hero-sub {
   font-size: clamp(1rem, 2.5vw, 1.15rem);
-  color: rgba(250,247,242,0.7); max-width: 560px;
+  color: rgba(250,247,242,0.7); max-width: 580px;
   line-height: 1.75; margin-bottom: 48px; font-weight: 300;
 }
 .hero-sub strong { color: var(--gold-light); font-weight: 600; }
@@ -123,15 +123,6 @@ nav {
 .community-inner .section-title span { color: var(--blush); }
 .community-perks { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 32px 0 40px; }
 .perk { background: rgba(242,167,187,0.1); border: 1px solid rgba(242,167,187,0.25); border-radius: 50px; padding: 8px 18px; font-size: 0.82rem; color: var(--blush); }
-.join-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; }
-.join-form input {
-  flex: 1; min-width: 200px; padding: 14px 20px; border-radius: 50px;
-  border: 1.5px solid rgba(201,150,43,0.3);
-  background: rgba(255,255,255,0.05); color: var(--cream);
-  font-size: 0.92rem; font-family: 'DM Sans', sans-serif; outline: none;
-}
-.join-form input::placeholder { color: rgba(250,247,242,0.35); }
-.join-form input:focus { border-color: var(--gold); }
 .join-note { margin-top: 16px; font-size: 0.75rem; color: rgba(250,247,242,0.3); }
 
 /* WEB PACKAGES */
@@ -180,7 +171,6 @@ nav {
 .service-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
 .service-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
 .service-desc { font-size: 0.82rem; color: rgba(250,247,242,0.5); line-height: 1.65; }
-
 
 /* CONTACT */
 .contact-section { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(201,150,43,0.08); padding: 100px 24px; }
@@ -235,26 +225,26 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — UPDATED -->
 <section class="hero">
-  <span class="badge">✨ Her Money. Her Power. Her Legacy.</span>
+  <span class="badge">✨ Tech Executive VA · SheMoney</span>
   <h1 class="hero-title">
-    <span class="she">SHE</span>
-    <span class="money">MONEY</span>
-    <span class="community">Community</span>
+    <span class="line1">Premium Executive VA</span>
+    <span class="line2">for Ambitious Business Owners</span>
+    <span class="line3">Her Money. Her Power. Her Legacy.</span>
   </h1>
   <p class="hero-sub">
-    A movement for women who are <strong>done waiting</strong> — to earn more, build online, and create wealth that lasts beyond them.
+    You built this business to <strong>lead — not to do admin.</strong> I handle the operations, systems and backend so you can focus on growth, clients and the vision that started it all.
   </p>
   <div class="hero-btns">
-    <a href="#community" class="btn">Join the Community — It's Free</a>
-    <a href="#websites" class="btn-outline">I Need a Website</a>
+    <a href="#contact" class="btn">Work With Me →</a>
+    <a href="#community" class="btn-outline">Join the Community Free</a>
   </div>
-  <p class="note">No spam. Just tools, money tips & women winning.</p>
+  <p class="note">From R3,000/month · WhatsApp 073 207 7775</p>
   <div class="stats">
     <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years in Corporate</span></div>
     <div class="stat"><span class="stat-num">3</span><span class="stat-label">Brands Built</span></div>
-    <div class="stat"><span class="stat-num">R0</span><span class="stat-label">To Join</span></div>
+    <div class="stat"><span class="stat-num">R0</span><span class="stat-label">To Join Community</span></div>
   </div>
 </section>
 <div class="divider"></div>
@@ -298,7 +288,6 @@ footer {
     <h2 class="section-title">I Build Websites<br>for SA Startups</h2>
     <p class="section-sub">Professional websites powered by AI — delivered faster, priced fairly. Your business deserves to look the part online.</p>
     <div class="packages-grid">
-      <!-- Starter -->
       <div class="pkg-card">
         <p class="pkg-name">Starter</p>
         <p class="pkg-price">R3,500</p>
@@ -314,7 +303,6 @@ footer {
         </ul>
         <a href="#contact" class="pkg-btn outline">Get Started</a>
       </div>
-      <!-- Standard -->
       <div class="pkg-card featured">
         <span class="popular-tag">Most Popular</span>
         <p class="pkg-name">Standard</p>
@@ -332,7 +320,6 @@ footer {
         </ul>
         <a href="#contact" class="pkg-btn">Get Started</a>
       </div>
-      <!-- Premium -->
       <div class="pkg-card">
         <p class="pkg-name">Premium</p>
         <p class="pkg-price">R18,000</p>
@@ -359,7 +346,7 @@ footer {
 <!-- VA & DIGITAL MARKETING SERVICES -->
 <section class="va-section" id="va-services">
   <div class="va-inner">
-    <span class="va-badge">Executive VA & Digital Marketing</span>
+    <span class="va-badge">Tech Executive VA & Digital Marketing</span>
     <h2 class="va-title">Your business runs better<br>when you have the <span class="highlight">right support</span></h2>
     <p class="va-subtitle">With 12+ years of corporate experience and AI-powered tools, I help entrepreneurs, executives and small businesses operate at their best — without the overhead of a full-time hire.</p>
     <div class="services-grid">
@@ -427,10 +414,10 @@ footer {
       <input type="tel" name="phone" placeholder="Your phone number (optional)">
       <select name="service" required>
         <option value="" disabled selected>What do you need help with?</option>
+        <option>Executive VA Services</option>
         <option>Website Design — Starter (R3,500)</option>
         <option>Website Design — Standard (R8,500)</option>
         <option>Website Design — Premium (R18,000)</option>
-        <option>Executive VA Services</option>
         <option>Social Media Management</option>
         <option>Email Marketing Setup</option>
         <option>Digital Marketing Strategy</option>
