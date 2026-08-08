@@ -125,7 +125,7 @@ nav {
 .perk { background: rgba(242,167,187,0.1); border: 1px solid rgba(242,167,187,0.25); border-radius: 50px; padding: 8px 18px; font-size: 0.82rem; color: var(--blush); }
 .join-note { margin-top: 16px; font-size: 0.75rem; color: rgba(250,247,242,0.3); }
 
-/* WEB PACKAGES */
+/* PACKAGES (shared by VA + Web Design pricing) */
 .packages-section { padding: 100px 24px; }
 .packages-inner { max-width: 1100px; margin: 0 auto; }
 .packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 52px; }
@@ -141,6 +141,7 @@ nav {
 .popular-tag { display: inline-block; background: var(--gold); color: var(--black); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
 .pkg-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--white); margin-bottom: 6px; }
 .pkg-price { font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+.pkg-price span { font-size: 0.95rem; color: rgba(250,247,242,0.4); font-weight: 500; }
 .pkg-desc { font-size: 0.8rem; color: rgba(250,247,242,0.4); margin-bottom: 20px; }
 .pkg-divider { height: 1px; background: rgba(201,150,43,0.15); margin-bottom: 20px; }
 .pkg-features { list-style: none; margin-bottom: 28px; }
@@ -171,6 +172,7 @@ nav {
 .service-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
 .service-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
 .service-desc { font-size: 0.82rem; color: rgba(250,247,242,0.5); line-height: 1.65; }
+.va-section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: block; margin: 60px 0 20px; }
 
 /* CONTACT */
 .contact-section { background: rgba(255,255,255,0.02); border-top: 1px solid rgba(201,150,43,0.08); padding: 100px 24px; }
@@ -218,14 +220,14 @@ footer {
   <a href="#" class="nav-logo">SHE<span>MONEY</span></a>
   <div class="nav-links">
     <a href="#community" class="nav-link">Community</a>
-    <a href="#websites" class="nav-link">Web Design</a>
     <a href="#va-services" class="nav-link">VA Services</a>
+    <a href="#websites" class="nav-link">Web Design</a>
     <a href="#store" class="nav-link">Store</a>
     <a href="#contact" class="nav-btn">Work With Me</a>
   </div>
 </nav>
 
-<!-- HERO — UPDATED -->
+<!-- HERO -->
 <section class="hero">
   <span class="badge">✨ Tech Executive VA · SheMoney</span>
   <h1 class="hero-title">
@@ -281,7 +283,101 @@ footer {
 </section>
 <div class="divider"></div>
 
-<!-- WEBSITE PACKAGES -->
+<!-- VA & DIGITAL MARKETING SERVICES — NOW FIRST, WITH PRICING -->
+<section class="va-section" id="va-services">
+  <div class="va-inner">
+    <span class="va-badge">Tech Executive VA & Digital Marketing</span>
+    <h2 class="va-title">Your business runs better<br>when you have the <span class="highlight">right support</span></h2>
+    <p class="va-subtitle">With 12+ years of corporate experience and AI-powered tools, I help entrepreneurs, executives and small businesses operate at their best — without the overhead of a full-time hire.</p>
+
+    <div class="packages-grid">
+      <div class="pkg-card">
+        <p class="pkg-name">Starter</p>
+        <p class="pkg-price">R3,000<span>/month</span></p>
+        <p class="pkg-desc">For founders who just need the basics off their plate</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>10 hours/month support</li>
+          <li>Email & calendar management</li>
+          <li>Basic admin & scheduling</li>
+          <li>1 business day turnaround</li>
+        </ul>
+        <a href="#contact" class="pkg-btn outline">Get Started</a>
+      </div>
+      <div class="pkg-card featured">
+        <span class="popular-tag">Most Popular</span>
+        <p class="pkg-name">Standard</p>
+        <p class="pkg-price">R5,500<span>/month</span></p>
+        <p class="pkg-desc">For business owners ready to hand off content and admin</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>20 hours/month support</li>
+          <li>Everything in Starter, plus:</li>
+          <li>Social media content creation & scheduling</li>
+          <li>Basic monthly reporting</li>
+          <li>Same-day response on business days</li>
+        </ul>
+        <a href="#contact" class="pkg-btn">Get Started</a>
+      </div>
+      <div class="pkg-card">
+        <p class="pkg-name">Premium</p>
+        <p class="pkg-price">R9,500<span>/month</span></p>
+        <p class="pkg-desc">Near full-time executive support without the full-time hire</p>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-features">
+          <li>35–40 hours/month support</li>
+          <li>Everything in Standard, plus:</li>
+          <li>Content & copywriting (blog/newsletter)</li>
+          <li>Email marketing setup & campaigns</li>
+          <li>AI-powered tools support (chatbots, CV builders)</li>
+          <li>Priority WhatsApp access</li>
+        </ul>
+        <a href="#contact" class="pkg-btn outline">Get Started</a>
+      </div>
+    </div>
+    <p class="pkg-note">💬 Need something custom? <a href="#contact" style="color:var(--gold);text-decoration:none;">Let's chat</a> — all packages include a free 15-minute discovery call.</p>
+
+    <span class="va-section-label">What's Included Across VA Support</span>
+    <div class="services-grid">
+      <div class="service-item">
+        <span class="service-icon">📋</span>
+        <h3 class="service-name">Executive VA Support</h3>
+        <p class="service-desc">Calendar management, email management, travel coordination, reports and administrative support for busy executives.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">📱</span>
+        <h3 class="service-name">Social Media Management</h3>
+        <p class="service-desc">Content creation, scheduling, captions, hashtag strategy and community engagement across all platforms.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">✍️</span>
+        <h3 class="service-name">Content & Copywriting</h3>
+        <p class="service-desc">Blog posts, newsletters, website copy, product descriptions and marketing materials written in your brand voice.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">📧</span>
+        <h3 class="service-name">Email Marketing</h3>
+        <p class="service-desc">Setup, strategy, email sequences, campaigns and list management to grow and nurture your audience.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">🤖</span>
+        <h3 class="service-name">AI-Powered Solutions</h3>
+        <p class="service-desc">CV builders, content generators, chatbots and custom AI tools built for your specific business needs.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">🎯</span>
+        <h3 class="service-name">Digital Marketing Strategy</h3>
+        <p class="service-desc">Full marketing strategy, brand positioning, funnel setup and campaign management to grow your business online.</p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="#contact" class="btn">Let's Chat →</a>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- WEBSITE PACKAGES — NOW SECOND -->
 <section class="packages-section" id="websites">
   <div class="packages-inner">
     <span class="section-tag">Web Design Services</span>
@@ -343,51 +439,6 @@ footer {
 </section>
 <div class="divider"></div>
 
-<!-- VA & DIGITAL MARKETING SERVICES -->
-<section class="va-section" id="va-services">
-  <div class="va-inner">
-    <span class="va-badge">Tech Executive VA & Digital Marketing</span>
-    <h2 class="va-title">Your business runs better<br>when you have the <span class="highlight">right support</span></h2>
-    <p class="va-subtitle">With 12+ years of corporate experience and AI-powered tools, I help entrepreneurs, executives and small businesses operate at their best — without the overhead of a full-time hire.</p>
-    <div class="services-grid">
-      <div class="service-item">
-        <span class="service-icon">📋</span>
-        <h3 class="service-name">Executive VA Support</h3>
-        <p class="service-desc">Calendar management, email management, travel coordination, reports and administrative support for busy executives.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">📱</span>
-        <h3 class="service-name">Social Media Management</h3>
-        <p class="service-desc">Content creation, scheduling, captions, hashtag strategy and community engagement across all platforms.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">✍️</span>
-        <h3 class="service-name">Content & Copywriting</h3>
-        <p class="service-desc">Blog posts, newsletters, website copy, product descriptions and marketing materials written in your brand voice.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">📧</span>
-        <h3 class="service-name">Email Marketing</h3>
-        <p class="service-desc">Setup, strategy, email sequences, campaigns and list management to grow and nurture your audience.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">🤖</span>
-        <h3 class="service-name">AI-Powered Solutions</h3>
-        <p class="service-desc">CV builders, content generators, chatbots and custom AI tools built for your specific business needs.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">🎯</span>
-        <h3 class="service-name">Digital Marketing Strategy</h3>
-        <p class="service-desc">Full marketing strategy, brand positioning, funnel setup and campaign management to grow your business online.</p>
-      </div>
-    </div>
-    <div style="text-align:center;">
-      <a href="#contact" class="btn">Let's Chat →</a>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
 <!-- STORE -->
 <section class="section" id="store">
   <span class="section-tag">SheMoney Store</span>
@@ -414,7 +465,9 @@ footer {
       <input type="tel" name="phone" placeholder="Your phone number (optional)">
       <select name="service" required>
         <option value="" disabled selected>What do you need help with?</option>
-        <option>Executive VA Services</option>
+        <option>VA Package — Starter (R3,000/month)</option>
+        <option>VA Package — Standard (R5,500/month)</option>
+        <option>VA Package — Premium (R9,500/month)</option>
         <option>Website Design — Starter (R3,500)</option>
         <option>Website Design — Standard (R8,500)</option>
         <option>Website Design — Premium (R18,000)</option>
@@ -449,8 +502,8 @@ footer {
   </div>
   <div class="footer-links">
     <a href="#community">Community</a>
-    <a href="#websites">Web Design</a>
     <a href="#va-services">VA Services</a>
+    <a href="#websites">Web Design</a>
     <a href="#store">Store</a>
     <a href="#contact">Contact</a>
   </div>
