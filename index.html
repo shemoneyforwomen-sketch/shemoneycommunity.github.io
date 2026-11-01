@@ -204,9 +204,8 @@ form h3{font-size:28px}
 label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:700}
 input,select,textarea{font:500 15px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
 textarea{min-height:110px;resize:vertical}
-.result{display:none;flex-direction:column;gap:12px;background:var(--gold-soft);border-radius:14px;padding:18px}
-.result.show{display:flex}
-.result p{font-size:14px}
+.form-err{background:var(--gold-soft);border-radius:12px;padding:12px 14px;font-size:14px;font-weight:600}
+.form-note{font-size:13px;color:var(--muted);text-align:center}
 
 /* FOOTER */
 footer{background:var(--band);color:var(--band-fg);border-top:1px solid var(--band-line)}
@@ -491,7 +490,7 @@ footer .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:36px
       <h2 class="h2">Let's talk about <span>your business</span></h2>
       <p class="lead">Send me a message and I'll get back to you within 24 hours on WhatsApp or email.</p>
       <div>
-        <a class="c-line" href="tel:+27732077775"><small>Call</small><span>073 207 7775</span></a>
+        <a class="c-line" href="tel:+27732077775"><small>Call</small><span>+27 73 207 7775</span></a>
         <a class="c-line" href="https://wa.me/27732077775?text=Hi%20Elsie%21%20I%20found%20you%20on%20shemoney.co.za" target="_blank" rel="noopener"><small>WhatsApp</small><span>Chat with me now</span></a>
         <a class="c-line" href="mailto:shemoneyforwomen@gmail.com"><small>Email</small><span>shemoneyforwomen@gmail.com</span></a>
       </div>
@@ -527,11 +526,9 @@ footer .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:36px
         </select>
       </label>
       <label for="f-msg">Tell me a little about your business<textarea id="f-msg" name="msg" placeholder="What is taking up most of your time right now?"></textarea></label>
-      <button type="submit" class="btn btn-ink">Send my message <span class="arrow">→</span></button>
-      <div class="result" id="result" aria-live="polite">
-        <p>Thank you! Your message is ready. Tap below to send it to me on WhatsApp.</p>
-        <a id="waLink" href="https://wa.me/27732077775" target="_blank" rel="noopener" class="btn btn-gold">Open WhatsApp <span class="arrow">→</span></a>
-      </div>
+      <p class="form-err" id="formErr" hidden>Please add your name so I know who I'm chatting to.</p>
+      <a id="sendBtn" href="https://wa.me/27732077775" target="_blank" rel="noopener" class="btn btn-ink">Send my message on WhatsApp <span class="arrow">→</span></a>
+      <p class="form-note">Your message opens in WhatsApp, ready to send to +27 73 207 7775.</p>
     </form>
   </div>
 </section>
@@ -547,7 +544,7 @@ footer .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:36px
         <a href="#web-design">Web Design</a>
         <a href="https://www.facebook.com/shemoneycommunityforwomen/" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/shemoney_forwomen/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@shemoney_forwomen" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.tiktok.com/@shemoneycommunity" target="_blank" rel="noopener">TikTok</a>
       </nav>
     </div>
   </div>
@@ -562,15 +559,21 @@ footer .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:36px
   var sel=document.getElementById('f-need');
   document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',function(){sel.value=b.getAttribute('data-pick');});});
 
-  document.getElementById('contactForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=document.getElementById('f-name'),name=n.value.trim();
-    if(!name){n.setCustomValidity('Please add your name');n.reportValidity();n.setCustomValidity('');n.focus();return;}
-    var biz=document.getElementById('f-biz').value.trim(),msg=document.getElementById('f-msg').value.trim();
-    var text='Hi Elsie! I found you on shemoney.co.za.\n\nName: '+name+(biz?'\nBusiness: '+biz:'')+'\nI am interested in: '+sel.value+(msg?'\n\n'+msg:'');
-    document.getElementById('waLink').href='https://wa.me/27732077775?text='+encodeURIComponent(text);
-    document.getElementById('result').classList.add('show');
+  var form=document.getElementById('contactForm'),send=document.getElementById('sendBtn'),err=document.getElementById('formErr');
+  var nameEl=document.getElementById('f-name'),bizEl=document.getElementById('f-biz'),msgEl=document.getElementById('f-msg');
+  function build(){
+    var name=nameEl.value.trim(),biz=bizEl.value.trim(),msg=msgEl.value.trim();
+    var text='Hi Elsie! I found you on shemoney.co.za.\n\nName: '+(name||'')+(biz?'\nBusiness: '+biz:'')+'\nI am interested in: '+sel.value+(msg?'\n\n'+msg:'');
+    send.href='https://wa.me/27732077775?text='+encodeURIComponent(text);
+  }
+  ['input','change'].forEach(function(ev){form.addEventListener(ev,function(){build();if(nameEl.value.trim())err.hidden=true;});});
+  document.querySelectorAll('[data-pick]').forEach(function(b){b.addEventListener('click',build);});
+  build();
+  send.addEventListener('click',function(e){
+    build();
+    if(!nameEl.value.trim()){e.preventDefault();err.hidden=false;nameEl.focus();}
   });
+  form.addEventListener('submit',function(e){e.preventDefault();send.click();});
 })();
 </script>
 
