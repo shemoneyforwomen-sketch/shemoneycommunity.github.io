@@ -390,6 +390,63 @@ footer .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:36px
   </div>
 </section>
 
+<!-- 7-DAY TRIAL -->
+<section class="trial" id="trial" style="padding-top:0">
+  <style>
+    .trial .t-head{max-width:660px;display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(32px,4vw,48px)}
+    .trial .t-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start}
+    .trial .t-card{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;min-width:0}
+    .trial .t-card h3{font-size:26px}
+    .trial .t-hours{font-size:14.5px;color:var(--muted);margin:6px 0 18px}
+    .trial .t-list{list-style:none;padding:18px 0 0;margin:0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+    .trial .t-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px}
+    .trial .t-list li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23111' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+    .trial .t-list b{display:block;font-weight:700}
+    .trial .t-list span{color:var(--muted)}
+    .trial .t-price{background:var(--band);color:var(--band-fg);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+    .trial .t-price h3{font-size:26px;color:var(--gold)}
+    .trial .t-amount{font-family:var(--f-display);font-size:48px;line-height:1}
+    .trial .t-once{font-size:14px;color:var(--band-muted);margin-top:-4px}
+    .trial .t-credit{background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 50%,transparent);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.55}
+    .trial .t-credit b{color:var(--gold)}
+    .trial .t-price .btn{width:100%}
+    .trial .t-price .btn-gold:hover{background:var(--band-fg);color:var(--band)}
+    .trial .t-price .btn-line{color:var(--band-fg)}
+    .trial .t-price .btn-line:hover{background:var(--band-fg);color:var(--band);border-color:var(--band-fg)}
+    .trial .t-terms{font-size:13px;color:var(--muted);margin-top:24px;max-width:860px}
+    @media (max-width:980px){.trial .t-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+  </style>
+  <div class="wrap">
+    <div class="t-head">
+      <span class="eyebrow">7-Day Trial</span>
+      <h2 class="h2">Try your Tech Executive VA <span>for 7 days</span></h2>
+      <p class="lead">Not sure yet? Work with me for a week before you commit. See how I work, how I communicate, and how much time I can give back to you.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card">
+        <h3>What's included</h3>
+        <p class="t-hours">Up to 6 hours of hands-on work</p>
+        <ul class="t-list">
+          <li><div><b>Inbox reset</b><span>Your email organised into labels and folders, with filters so important messages stand out.</span></div></li>
+          <li><div><b>Calendar tidy-up</b><span>Your schedule sorted, plus a booking link and reminders set up.</span></div></li>
+          <li><div><b>2 branded Canva designs</b><span>Social posts, a flyer or a simple template in your brand colours.</span></div></li>
+          <li><div><b>One admin or research task</b><span>A supplier comparison, a contact list or a document clean-up, whatever is on your to-do list.</span></div></li>
+          <li><div><b>15 minute review call</b><span>I show you what I did and what I'd take off your plate next.</span></div></li>
+        </ul>
+      </div>
+      <div class="t-price">
+        <h3>Investment</h3>
+        <div class="t-amount">R1,500</div>
+        <p class="t-once">Once off · quote in your currency on request</p>
+        <div class="t-credit">✨ <b>Continue with me and your trial counts.</b> Subscribe to the Starter package (R3,000 per month) within 7 days of your trial ending, and your first month is only <b>R1,500</b>.</div>
+        <a href="https://wa.me/27732077775?text=Hi%20Elsie%21%20I%27d%20like%20to%20start%20the%207-Day%20VA%20Trial%20%28R1%2C500%29." target="_blank" rel="noopener" class="btn btn-gold">Start my 7-day trial <span class="arrow">→</span></a>
+        <a href="https://calendar.app.google/25A61mCaSA6PCBRG7" target="_blank" rel="noopener" class="btn btn-line">Book a free call first</a>
+      </div>
+    </div>
+    <p class="t-terms">Up to 6 hours of work over 7 days, Monday to Friday. Payment is due upfront before work begins. One trial per client. Unused hours don't carry over. The trial credit applies to the Starter package only; Standard and Premium are charged at full price. No automatic subscription: you choose whether to continue after your review call.</p>
+  </div>
+</section>
+
 <!-- WEB DESIGN -->
 <section class="web" id="web-design">
   <div class="wrap">
